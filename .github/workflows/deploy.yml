@@ -1,0 +1,43 @@
+name: Vetline.uz deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: GIT pulling from github repository
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      with:
+        source: "."
+        target: "/home/front/vetline.uz"
+
+    - name: Command using from script
+      uses: appleboy/ssh-action@master
+      env:
+        DISABLE_ESLINT_PLUGIN: "true"
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        envs: DISABLE_ESLINT_PLUGIN
+        script_stop: true
+        script: |
+          git --work-tree=/home/front/vetline.uz --git-dir=/home/front/vetline.uz/.git clean -f .
+          npm --prefix /home/front/vetline.uz/ install /home/front/vetline.uz/
+          npm --prefix /home/front/vetline.uz/ run build
+          sh /home/devops/vetline_front.sh "${{ github.event.head_commit.message }}"
+          pm2 reload vetline.uz
