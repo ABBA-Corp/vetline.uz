@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { useGlobal } from "../redux/selectors";
 import { ViewSvg } from "./Svgs";
 import { getRestApi } from "./utils";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 export default function HorizontalSlider({ lang }) {
   const settings = {
     dots: false,
@@ -14,16 +16,33 @@ export default function HorizontalSlider({ lang }) {
     arrows: false
   };
   const [products, setProducts] = useState([]);
+  const [data, setData] = useState({});
   const [purchase, setPurchase] = useState(false);
   useEffect(() => {
     getRestApi("products/", setProducts);
   }, []);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (e) => {
+    toast.success("Request has been sent");
+    let inComing = `
+    🗣𝙽𝚎𝚠 𝚙𝚘𝚜𝚝 𝚘𝚛𝚍𝚎𝚛 %0A👤name : ${e.name}, %0A📱phone: ${e.phone}, %0A📦product: ${data?.name_uz}, %0A
+  `;
+    fetch(
+      `https://api.telegram.org/bot6252325299:AAFx-LHCiQ06MUyhCw12JjwfhYEDZbXLWI0/sendMessage?chat_id=-820098065&text=${inComing}`
+    ).then(() => {
+      reset();
+      setPurchase(false);
+    });
+  };
   const { currentLang, language } = useGlobal();
   return (
     <>
       {purchase && (
         <div className="fixed left-0 top-0 w-full h-screen bg-[#08080841] z-[999] flex justify-center items-center">
-          <form className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income"
+          >
             <button
               className="absolute text-[2vw] right-[2vw] top-[1vw] w-[2vw] h-[2vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
               onClick={() => setPurchase(false)}
@@ -39,6 +58,7 @@ export default function HorizontalSlider({ lang }) {
                 type="text"
                 placeholder={language["name"]}
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                {...register("name")}
                 required
               />
 
@@ -47,12 +67,13 @@ export default function HorizontalSlider({ lang }) {
                 type="number"
                 placeholder={language["phone"]}
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                {...register("phone")}
                 required
               />
 
               <p className="text-[1.4vw] pl-[1vw]">{language["typeproduct"]}</p>
               <input
-                defaultValue={"Tovuqlar uchun korm"}
+                defaultValue={data[`name_${currentLang}`]}
                 className="font-[500] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 disabled
@@ -95,7 +116,10 @@ export default function HorizontalSlider({ lang }) {
                   <div className="flex gap-[1vw]">
                     <button
                       className="border-black border transition-[1.1s] hover:bg-black hover:text-[#fff] px-[1.6vw] py-[.5vw] rounded-[2vw] text-[1vw]"
-                      onClick={() => setPurchase(true)}
+                      onClick={() => {
+                        setData(item);
+                        setPurchase(true);
+                      }}
                     >
                       {lang.top["5"]}
                     </button>

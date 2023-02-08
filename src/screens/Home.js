@@ -16,9 +16,10 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import HorizontalSlider from "../components/HorizontalSlider";
-import Loader from "../components/Loader";
 import { useGlobal } from "../redux/selectors";
 import { getRestApi, tabNames } from "../components/utils";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 function Home() {
   const settings = {
@@ -37,7 +38,7 @@ function Home() {
   const [tab, setTab] = useState(0);
   const [notificationOne, setNotificationOne] = useState([]);
   const [visible, setVisible] = useState(false);
-
+  const { register, handleSubmit, reset } = useForm();
   useEffect(() => {
     getRestApi("products/", setProducts);
     getRestApi("categories/", setCategories);
@@ -45,6 +46,19 @@ function Home() {
       setVisible(true);
     }, 2000);
   }, []);
+
+  const onSubmit = (e) => {
+    toast.success("Request has been sent");
+    let inComing = `
+    🗣𝙽𝚎𝚠 𝚙𝚘𝚜𝚝  %0A👤name : ${e.name}, %0A📱phone: ${e.phone}, %0A💬comment: ${e?.comment}, %0A
+
+  `;
+    fetch(
+      `https://api.telegram.org/bot6252325299:AAFx-LHCiQ06MUyhCw12JjwfhYEDZbXLWI0/sendMessage?chat_id=-820098065&text=${inComing}`
+    ).then(() => {
+      reset();
+    });
+  };
   const { language, currentLang } = useGlobal();
   return (
     <>
@@ -180,7 +194,7 @@ function Home() {
                   to={"/products/" + item?.id}
                   className="w-[32.8%] relative h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer justify-center"
                   style={{
-                    backgroundImage: `url(${item?.photo})`,
+                    backgroundImage: `url(${item?.photo})`
                   }}
                 >
                   <div className="w-full bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s]"></div>
@@ -191,15 +205,15 @@ function Home() {
               ))}
             </div>
             <ReactScrollWheelHandler
-              // downHandler={({ wheelDeltaY }) => {
-              //   // console.log(e);
-              //   if (window.innerWidth > 768) {
-              //     if (wheelDeltaY < -150) {
-              //       window.scrollTo(0, window.innerHeight * 3);
-              //       document.body.style.overflowY = "hidden";
-              //     }
-              //   }
-              // }}
+            // downHandler={({ wheelDeltaY }) => {
+            //   // console.log(e);
+            //   if (window.innerWidth > 768) {
+            //     if (wheelDeltaY < -150) {
+            //       window.scrollTo(0, window.innerHeight * 3);
+            //       document.body.style.overflowY = "hidden";
+            //     }
+            //   }
+            // }}
             >
               <div className="text-center" id="tops">
                 <h1 className="md:text-[3vw] text-[5vw] color-[#000] my-[4vw] font-extrabold uppercase">
@@ -268,12 +282,16 @@ function Home() {
                       {language.abouttext}
                     </p>
                     <div className="flex mt-[4vw] gap-[2vw]">
-                      <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
-                        {language.top["6"]}
-                      </button>
-                      <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw]  md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
-                        {language["5"]}
-                      </button>
+                      <Link to="/about">
+                        <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
+                          {language.top["6"]}
+                        </button>
+                      </Link>
+                      <a href="#contact">
+                        <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw]  md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
+                          {language["5"]}
+                        </button>
+                      </a>
                     </div>
                   </div>
                   <iframe
@@ -309,10 +327,13 @@ function Home() {
                   Novvos
                 </button> */}
                 {tabNames?.map((item, i) => (
-                  <button className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full" onClick={()=>setTab(i)}
-                  style={{
-                    zIndex: tab === i ? 40 : 0
-                  }}>
+                  <button
+                    className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full"
+                    onClick={() => setTab(i)}
+                    style={{
+                      zIndex: tab === i ? 40 : 0
+                    }}
+                  >
                     {item?.name}
                   </button>
                 ))}
@@ -474,7 +495,11 @@ function Home() {
               </div>
             </div>
           </div>
-          <form className="md:p-[3vw] md:px-[6vw] bg-[#F8F3EC] mt-[3vw] rounded-[1vw]">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="md:p-[3vw] md:px-[6vw] bg-[#F8F3EC] mt-[3vw] rounded-[1vw]"
+            id="contact"
+          >
             <div className="grid md:grid-cols-2 gap-[4vw]">
               <div className="md:grid hidden gap-[2vw]">
                 <h1 className="text-[2vw] font-bold">
@@ -494,12 +519,16 @@ function Home() {
                 <input
                   required
                   type="text"
+                  {...register("name")}
+
                   placeholder={language["name"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 />
                 <input
                   required
-                  type="text"
+                  type="number"
+                  {...register("phone")}
+
                   placeholder={language["phone"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 />
@@ -507,6 +536,8 @@ function Home() {
                   required
                   cols="30"
                   rows="10"
+                  {...register("comment")}
+
                   placeholder={language["comment"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 ></textarea>

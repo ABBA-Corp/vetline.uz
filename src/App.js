@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./screens/About";
 import Loader from "./components/Loader";
 import Terms from "./screens/Terms";
+import { Toaster } from "react-hot-toast";
 function App() {
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
   }, []);
   return (
     <div>
+      <Toaster />
       {(loader && <Loader />) || (
         <Provider store={store}>
           <BrowserRouter>

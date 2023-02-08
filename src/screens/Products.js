@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ViewSvg } from "../components/Svgs";
 import { getRestApi } from "../components/utils";
 import { useGlobal } from "../redux/selectors";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -32,7 +34,19 @@ function Products() {
   function Card({ data }) {
     const [visible, setVisible] = useState(false);
     const [purchase, setPurchase] = useState(false);
-
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = (e) => {
+      toast.success("Request has been sent");
+      let inComing = `
+      🗣𝙽𝚎𝚠 𝚙𝚘𝚜𝚝 𝚘𝚛𝚍𝚎𝚛 %0A👤name : ${e.name}, %0A📱phone: ${e.phone}, %0A📦product: ${data?.name_uz}, %0A
+    `;
+      fetch(
+        `https://api.telegram.org/bot6252325299:AAFx-LHCiQ06MUyhCw12JjwfhYEDZbXLWI0/sendMessage?chat_id=-820098065&text=${inComing}`
+      ).then(() => {
+        reset();
+        setPurchase(false);
+      });
+    };
     return (
       <>
         {visible && (
@@ -71,8 +85,12 @@ function Products() {
         )}
         {purchase && (
           <div className="fixed left-0 top-0 w-full h-screen bg-[#08080841] z-[999] flex justify-center items-center">
-            <form className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income"
+            >
               <button
+                type="button"
                 className="absolute text-[2vw] right-[2vw] top-[1vw] w-[2vw] h-[2vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
                 onClick={() => setPurchase(false)}
               >
@@ -88,6 +106,7 @@ function Products() {
                   placeholder={language["name"]}
                   className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
+                  {...register("name")}
                 />
 
                 <p className="text-[1.4vw] pl-[1vw]">{language["phone"]}</p>
@@ -96,13 +115,14 @@ function Products() {
                   placeholder={language["phone"]}
                   className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
+                  {...register("phone")}
                 />
 
                 <p className="text-[1.4vw] pl-[1vw]">
                   {language["typeproduct"]}
                 </p>
                 <input
-                  defaultValue={"Tovuqlar uchun korm"}
+                  defaultValue={data[`name_${currentLang}`]}
                   className="font-[500] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
                   disabled
@@ -116,7 +136,7 @@ function Products() {
                   </button>
                   <button
                     className="p-[.4vw]  px-[1.2vw] bg-[#ffffff] rounded-[6vw] text-[1vw] text-[#000] border border-[black]"
-                    type="button"
+                    type="submit"
                   >
                     {language["writetelegram"]}
                   </button>
@@ -126,11 +146,13 @@ function Products() {
           </div>
         )}
         <div className="h-[30vw] w-[20vw] min-w-[20vw] bg-[#F6DABA] hover:bg-[#FF6557] cursor-pointer transition-[1.1s] rounded-[1vw]  md:flex hidden flex-col items-center  overflow-hidden">
-          <img
-            src={data?.thumbnail}
-            alt="img"
-            className="w-[15vw] h-[15vw] object-contain relative bottom-[-2vw]"
-          />
+          <Link to={"/product/" + data?.id}>
+            <img
+              src={data?.thumbnail}
+              alt="img"
+              className="w-[15vw] h-[15vw] object-contain relative bottom-[-2vw]"
+            />
+          </Link>
           <div className="h-[15vw] bg-[#ffffff63] w-full flex flex-col gap-[.4vw] items-center p-[2vw] md:pt-[4vw] justify-between">
             <h1 className="font-bold text-[1.5vw] text-center whitespace-nowrap">
               {data[`name_${currentLang}`]}
@@ -155,11 +177,13 @@ function Products() {
           </div>
         </div>
         <div className="h-[65vw] w-full min-w-[20vw] bg-[#F6DABA] rounded-[1vw] md:hidden  flex flex-col items-center  overflow-hidden justify-between">
-          <img
-            src={data?.thumbnail}
-            alt="img"
-            className="md:w-[15vw] md:h-[15vw] w-[30vw] h-[30vw] object-contain relative md:bottom-[-2vw] bottom-[-7vw]"
-          />
+          <Link to={"/product/" + data?.id}>
+            <img
+              src={data?.thumbnail}
+              alt="img"
+              className="md:w-[15vw] md:h-[15vw] w-[30vw] h-[30vw] object-contain relative md:bottom-[-2vw] bottom-[-7vw]"
+            />
+          </Link>
           <div className="h-[30vw] bg-[#FFEED6] w-full flex flex-col gap-[.4vw] items-center justify-center  p-[4vw]  pt-[5vw]">
             <h1 className="font-bold md:text-[1.5vw] text-[3.5vw] text-center whitespace-nowrap">
               {data[`name_${currentLang}`]}

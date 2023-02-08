@@ -4,23 +4,41 @@ import HorizontalSlider from "../components/HorizontalSlider";
 import { ViewSvg } from "../components/Svgs";
 import { getRestApi } from "../components/utils";
 import { useGlobal } from "../redux/selectors";
-
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [purchase, setPurchase] = useState(false);
+
   console.log(id);
   useEffect(() => {
     window.scrollTo(0, 0);
     getRestApi("products/" + id, setProduct);
   }, []);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (e) => {
+    toast.success("Request has been sent");
+    let inComing = `
+      🗣𝙽𝚎𝚠 𝚙𝚘𝚜𝚝 𝚘𝚛𝚍𝚎𝚛 %0A👤name : ${e.name}, %0A📱phone: ${e.phone}, %0A📦product: ${product?.name_uz}, %0A
+    `;
+    fetch(
+      `https://api.telegram.org/bot6252325299:AAFx-LHCiQ06MUyhCw12JjwfhYEDZbXLWI0/sendMessage?chat_id=-820098065&text=${inComing}`
+    ).then(() => {
+      reset();
+      setPurchase(false);
+    });
+  };
 
   const { language, currentLang } = useGlobal();
   return (
     <div className=" pt-[5vw] bg-[#E94B4B]">
       {purchase && (
         <div className="fixed left-0 top-0 w-full h-screen bg-[#08080841] z-[999] flex justify-center items-center">
-          <form className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income"
+          >
             <button
               className="absolute text-[2vw] right-[2vw] top-[1vw] w-[2vw] h-[2vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
               onClick={() => setPurchase(false)}
@@ -37,6 +55,7 @@ function Product() {
                 placeholder={language["name"]}
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
+                {...register("name")}
               />
 
               <p className="text-[1.4vw] pl-[1vw]">{language["phone"]}</p>
@@ -45,11 +64,12 @@ function Product() {
                 placeholder={language["phone"]}
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
+                {...register("phone")}
               />
 
               <p className="text-[1.4vw] pl-[1vw]">{language["typeproduct"]}</p>
               <input
-                defaultValue={"Tovuqlar uchun korm"}
+                defaultValue={product[`name_${currentLang}`]}
                 className="font-[500] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 disabled
@@ -63,7 +83,7 @@ function Product() {
                 </button>
                 <button
                   className="p-[.4vw]  px-[1.2vw] bg-[#ffffff] rounded-[6vw] text-[1vw] text-[#000] border border-[black]"
-                  type="button"
+                  type="submit"
                 >
                   {language["writetelegram"]}
                 </button>
@@ -89,7 +109,10 @@ function Product() {
             </p>
           </div>
           <div className="flex gap-[1vw]">
-            <button className="p-[.4vw] px-[1.5vw] min-w-[11vw] bg-[#ffffff] rounded-[6vw] text-[1.3vw] text-[#000] hover:bg-[#000] hover:text-[#fff] transition" onClick={()=>setPurchase(true)}>
+            <button
+              className="p-[.4vw] px-[1.5vw] min-w-[11vw] bg-[#ffffff] rounded-[6vw] text-[1.3vw] text-[#000] hover:bg-[#000] hover:text-[#fff] transition"
+              onClick={() => setPurchase(true)}
+            >
               Sotib olish
             </button>
             <a href="tel:+998995595353">
