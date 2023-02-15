@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import HorizontalSlider from "../components/HorizontalSlider";
 import { ViewSvg } from "../components/Svgs";
 import { getRestApi } from "../components/utils";
@@ -10,12 +10,14 @@ function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [purchase, setPurchase] = useState(false);
-
-  console.log(id);
+  const pathname = useLocation()
+  useEffect(() => {
+    getRestApi("products/" + id, setProduct);
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
     getRestApi("products/" + id, setProduct);
-  }, []);
+  }, [pathname]);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (e) => {
     toast.success("Request has been sent");

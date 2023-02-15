@@ -13,17 +13,10 @@ function Navbar() {
   };
   const [active, setActive] = useState(false);
   const pathname = useLocation();
-  // window.onscroll = () => {
-  //   if (pathname.pathname === "/") {
-  //     if (window.scrollY < window.innerHeight * 3 - 100) {
-  //       document.body.style.overflowY = "hidden";
-  //     } else {
-  //       document.body.style.overflowY = "scroll";
-  //     }
-  //   } else {
-  //     document.body.style.overflowY = "scroll";
-  //   }
-  // };
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
+  
   return (
     <div>
       <nav className="px-[7vw] py-[1vw] bg-[#E94B4B] md:rounded-b-[3vw] rounded-b-[6vw] fixed w-[100vw] left-0 top-0 right-0 z-[40]">
@@ -70,7 +63,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] rounded-[.3vw]">
+            <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] rounded-[.3vw]  border border-transparent hover:bg-transparent hover:border-white transition cursor-pointer">
               <img
                 src={`/assets/img/${currentLang}.png`}
                 className="w-[1.8vw] h-[1.3vw] object-cover"
@@ -80,7 +73,7 @@ function Navbar() {
                 name=""
                 id=""
                 onClick={changeLanguage}
-                defaultValue={localStorage['lang']}
+                defaultValue={localStorage["lang"]}
                 className="text-[#fff] text-[1vw] bg-transparent outline-none"
               >
                 <option value="uz">Uz</option>
@@ -90,11 +83,11 @@ function Navbar() {
             </button>
           </li>
           <li>
-          <a href="tel:+998995595353">
-            <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] px-[1vw] rounded-[.3vw] text-[1vw] text-[#fff]">
-              <ContactMan />
-              {language["5"]}
-            </button>
+            <a href="tel:+998995595353">
+              <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] px-[1vw] rounded-[.3vw] text-[1vw] text-[#fff] border border-transparent hover:bg-transparent hover:border-white transition">
+                <ContactMan />
+                {language["5"]}
+              </button>
             </a>
           </li>
         </ul>
