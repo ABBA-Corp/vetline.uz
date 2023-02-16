@@ -10,7 +10,7 @@ function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const [purchase, setPurchase] = useState(false);
-  const pathname = useLocation()
+  const pathname = useLocation();
   useEffect(() => {
     getRestApi("products/" + id, setProduct);
   }, []);
@@ -147,22 +147,24 @@ function Product() {
             Davolanish natijalari
           </h1>
           <div className="grid grid-cols-2 gap-[3vw]">
-            <div className="relative hoverer">
-              <img
-                src="https://cdn.pixabay.com/photo/2019/05/16/19/38/cock-4207970_1280.jpg"
-                alt=""
-                className="w-full h-[30vw] object-cover rounded-t-[2vw]"
-              />
-              <div className="absolute w-full opacity-hover bottom-0 p-[2vw] bg-gradient-to-b from-[#ffffff00] to-black">
-                <h2 className="text-[#ffff] text-[1.4vw] font-bold">
-                  3 oy “Vetline” yegan
-                </h2>
-                <p className="text-[#ffff] text-[1.4vw]">
-                  Самый лучший корм для ваших кошек
-                </p>
+            {product?.results_set?.map((item, i) => (
+              <div className="relative hoverer" key={i}>
+                <img
+                  src={item?.photo}
+                  alt=""
+                  className="w-full h-[30vw] object-cover rounded-t-[2vw]"
+                />
+                <div className="absolute w-full opacity-hover bottom-0 p-[2vw] bg-gradient-to-b from-[#ffffff00] to-black">
+                  <h2 className="text-[#ffff] text-[1.4vw] font-bold">
+                    {item?.[`title_${currentLang}`]}
+                  </h2>
+                  <p className="text-[#ffff] text-[1.4vw]">
+                    {item?.[`subtitle_${currentLang}`]}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="relative hoverer">
+            ))}
+            {/* <div className="relative hoverer">
               <img
                 src="https://cdn.pixabay.com/photo/2019/05/16/19/38/cock-4207970_1280.jpg"
                 alt=""
@@ -176,7 +178,7 @@ function Product() {
                   Самый лучший корм для ваших кошек
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="py-[4vw]">
