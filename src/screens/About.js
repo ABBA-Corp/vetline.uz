@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import { getRestApi } from "../components/utils";
+import { useGlobal } from "../redux/selectors";
 function About() {
-  useEffect(() => {
-    document.body.style.overflowY = "scroll";
-  }, []);
   const [activeHover, setActiveHover] = useState(0);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getRestApi("results", setData);
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -13,7 +16,7 @@ function About() {
     slidesToScroll: 2,
     arrows: false
   };
-
+  const { currentLang, language } = useGlobal();
   return (
     <div>
       <header className="md:h-screen bg-[#EBEBEB] md:pt-[8vw] pt-[30vw] px-[5vw] relative md:pb-0 pb-[8vw]">
@@ -62,7 +65,9 @@ function About() {
             >
               1000
             </h1>
-            <p className="md:text-[1vw] text-[3vw] text-[#fff]">Animals types</p>
+            <p className="md:text-[1vw] text-[3vw] text-[#fff]">
+              Animals types
+            </p>
           </div>
           <div className="flex flex-col hover-on two">
             <h1
@@ -71,7 +76,9 @@ function About() {
             >
               95
             </h1>
-            <p className="md:text-[1vw] text-[3vw] text-[#fff]">Animals types</p>
+            <p className="md:text-[1vw] text-[3vw] text-[#fff]">
+              Animals types
+            </p>
           </div>
           <div className="flex flex-col hover-on three">
             <h1
@@ -80,7 +87,9 @@ function About() {
             >
               304
             </h1>
-            <p className="md:text-[1vw] text-[3vw] text-[#fff]">Animals types</p>
+            <p className="md:text-[1vw] text-[3vw] text-[#fff]">
+              Animals types
+            </p>
           </div>
           <div className="flex flex-col hover-on four">
             <h1
@@ -89,7 +98,9 @@ function About() {
             >
               394
             </h1>
-            <p className="md:text-[1vw] text-[3vw] text-[#fff]">Animals types</p>
+            <p className="md:text-[1vw] text-[3vw] text-[#fff]">
+              Animals types
+            </p>
           </div>
           <div className={`md:block hidden after-bg left-${activeHover}`}></div>
         </div>
@@ -107,20 +118,20 @@ function About() {
         </h1>
         <div className="py-[4vw] pl-[6vw]">
           <Slider {...settings}>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((item, i) => (
+            {data?.map((item, i) => (
               <div className="pr-[2vw]" key={i}>
                 <div className="relative min-w-[24vw] pr-[2vw] hoverer">
                   <img
-                    src="https://cdn.pixabay.com/photo/2019/05/16/19/38/cock-4207970_1280.jpg"
+                    src={item?.photo}
                     alt=""
                     className="w-full h-[30vw] object-cover rounded-t-[2vw]"
                   />
                   <div className="absolute w-full bottom-0 p-[2vw] bg-gradient-to-b from-[#ffffff00] to-[#00000073] opacity-hover">
                     <h2 className="text-[#ffff] text-[1.4vw] font-bold">
-                      3 oy “Vetline” yegan
+                      {item?.[`title_${currentLang}`]}
                     </h2>
                     <p className="text-[#ffff] text-[1.4vw]">
-                      Самый лучший корм для ваших кошек
+                      {item?.[`subtitle_${currentLang}`]}
                     </p>
                   </div>
                 </div>
@@ -161,7 +172,9 @@ function About() {
           alt=""
         />
         <div className="flex flex-col justify-center  bg-[#ffffff] rounded-[2vw] gap-[2vw] md:p-[2vw] p-[4vw] py-[3vw] md:w-[35vw] w-[75vw] md:m-0 m-auto">
-          <h1 className="md:text-[2vw] text-[4vw] font-bold">Savol va takliflar uchun</h1>
+          <h1 className="md:text-[2vw] text-[4vw] font-bold">
+            Savol va takliflar uchun
+          </h1>
           <input
             type="text"
             placeholder="Ismingiz"
