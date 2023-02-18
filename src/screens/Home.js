@@ -14,7 +14,7 @@ import {
   ReactCompareSliderImage
 } from "react-compare-slider";
 import { Link, useLocation } from "react-router-dom";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import div from "react-scroll-wheel-handler";
 import HorizontalSlider from "../components/HorizontalSlider";
 import { useGlobal } from "../redux/selectors";
 import { getRestApi, tabNames } from "../components/utils";
@@ -131,7 +131,7 @@ function Home() {
                     className="absolute md:w-[20vw] w-[80vw] md:left-[40vw] left-[10vw] md:top-auto md:bottom-[20vw] top-[40vw]"
                     alt=""
                   />
-                  <div className="bg-[#F0D7B3] flex justify-center items-end p-[5vw] md:h-[100vh] h-[200vw]">
+                  <div className="bg-[#F0D7B3] bg-slide flex justify-center items-end p-[5vw] md:h-[100vh] h-[200vw]">
                     <div className="bg-[#E94A4A] p-[1vw] px-[4vw] md:w-[70%] w-[100%] items-center md:rounded-[2vw] rounded-[5vw] relative z-20 flex justify-between md:flex-row flex-col-reverse md:h-auto h-[77vw]">
                       <div className="flex flex-col ">
                         <h1 className="font-medium text-[#fff] md:text-[1.8vw] text-[5.2vw] md:text-left text-center">
@@ -143,12 +143,16 @@ function Home() {
                           <li>{language.top["4"]}</li>
                         </ul>
                         <div className="md:flex grid grid-cols-2 items-center mt-[2vw] gap-[1vw] md:pb-0 pb-[3vw]">
-                          <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
-                            {language.top["5"]}
-                          </button>
-                          <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
-                            {language.top["6"]}
-                          </button>
+                          <Link to={"/products"}>
+                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
+                              {language.top["5"]}
+                            </button>
+                          </Link>
+                          <Link to={"/about"}>
+                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
+                              {language.top["6"]}
+                            </button>
+                          </Link>
                         </div>
                       </div>
                       <img
@@ -204,43 +208,18 @@ function Home() {
                 </Link>
               ))}
             </div>
-            <ReactScrollWheelHandler
-            // downHandler={({ wheelDeltaY }) => {
-            //   // console.log(e);
-            //   if (window.innerWidth > 768) {
-            //     if (wheelDeltaY < -150) {
-            //       window.scrollTo(0, window.innerHeight * 3);
-            //       document.body.style.overflowY = "hidden";
-            //     }
-            //   }
-            // }}
-            >
+            <div>
               <div className="text-center" id="tops">
                 <h1 className="md:text-[3vw] text-[5vw] color-[#000] my-[4vw] font-extrabold uppercase">
                   {language.tops}
                 </h1>
               </div>
               <HorizontalSlider products={products} lang={language} />
-            </ReactScrollWheelHandler>
+            </div>
           </div>
           <div className="relative  bg-[#F9F2EB] md:h-[130vw] h-[230vw] md:overflow-visible overflow-hidden">
             <div className="relative md:h-[80vw]">
-              <ReactScrollWheelHandler
-                className="h-[80vw] absolute w-full z-[99]"
-                id="blackdoor"
-                // upHandler={() => {
-                //   if (window.innerWidth > 768) {
-                //     document.body.style.overflowY = "scroll";
-                //     window.scrollTo(0, window.innerHeight * 2);
-                //   }
-                // }}
-                // downHandler={() => {
-                //   if (window.innerWidth > 768) {
-                //     document.body.style.overflowY = "scroll";
-                //     window.scrollTo(0, window.innerHeight * 4);
-                //   }
-                // }}
-              >
+              <div className="h-[80vw] absolute w-full z-[99]" id="blackdoor">
                 <div className="w-[150%] relative left-[-25%] bg-black h-full rounded-[50%] flex items-center justify-center flex-col gap-[4vw]">
                   <div className="relative left-[-25vw]">
                     <div className="feather"></div>
@@ -256,17 +235,9 @@ function Home() {
                     {language.more}
                   </h1>
                 </div>
-              </ReactScrollWheelHandler>
+              </div>
             </div>
-            <ReactScrollWheelHandler
-              // upHandler={() => {
-              //   if (window.innerWidth > 768) {
-              //     document.body.style.overflowY = "hidden";
-              //     window.scrollTo(0, window.innerHeight * 3);
-              //   }
-              // }}
-              className="p-[3vw] md:relative md:top-[-10vw] absolute bottom-[-10vw] pt-[10vw] pb-[18vw] border-t-transparent"
-            >
+            <div className="p-[3vw] md:relative md:top-[-10vw] absolute bottom-[-10vw] pt-[10vw] pb-[18vw] border-t-transparent">
               <div className="bg-[#FFE7C3] p-[3vw] md:rounded-[1vw] rounded-[3vw] px-[6vw] md:mt-0 mt-[4vw]">
                 <div className="flex justify-between items-center md:flex-row flex-col">
                   <div className="md:w-[60%]">
@@ -304,7 +275,7 @@ function Home() {
                   />
                 </div>
               </div>
-            </ReactScrollWheelHandler>
+            </div>
             <img
               src={require("../assets/img/hen.png")}
               alt=""
@@ -443,13 +414,17 @@ function Home() {
               </div>
             </div>
             <div className="flex p-[3vw] justify-center gap-[4vw] md:py-[3vw] py-[6vw]">
-              <button className="md:border-black md:bg-transparent bg-[#E94A4A] border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] md:text-[#000] text-[#fff] hover:bg-[#000] hover:text-[#fff] transition">
-                Mahsulotlarimiz
-              </button>
-              <div className="relative md:w-auto w-full">
-                <button className="md:border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] relative z-20 md:bg-[#F8F3EC] bg-[#fff] md:text-[#000] text-[#E94A4A] hover:bg-[#000] hover:text-[#fff] transition">
-                  Bog`lanish
+              <Link to={"/products"}>
+                <button className="md:border-black md:bg-transparent bg-[#E94A4A] border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] md:text-[#000] text-[#fff] hover:bg-[#000] hover:text-[#fff] transition">
+                  Mahsulotlarimiz
                 </button>
+              </Link>
+              <div className="relative md:w-auto w-full">
+                <a href="#contact">
+                  <button className="md:border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] relative z-20 md:bg-[#F8F3EC] bg-[#fff] md:text-[#000] text-[#E94A4A] hover:bg-[#000] hover:text-[#fff] transition">
+                    Bog`lanish
+                  </button>
+                </a>
                 <img
                   src={require("../assets/img/dog.png")}
                   className="absolute  bottom-0 md:w-[9vw] w-[29vw]"
@@ -520,7 +495,6 @@ function Home() {
                   required
                   type="text"
                   {...register("name")}
-
                   placeholder={language["name"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 />
@@ -528,7 +502,6 @@ function Home() {
                   required
                   type="number"
                   {...register("phone")}
-
                   placeholder={language["phone"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 />
@@ -537,7 +510,6 @@ function Home() {
                   cols="30"
                   rows="10"
                   {...register("comment")}
-
                   placeholder={language["comment"]}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 ></textarea>

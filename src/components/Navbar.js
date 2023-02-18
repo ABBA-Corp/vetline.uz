@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 import { setLanguage } from "../redux/actions/globalActions";
 import { useGlobal } from "../redux/selectors";
-import { ContactMan, PhoneNav } from "./Svgs";
+import { ContactMan, HeaderLogo, PhoneNav } from "./Svgs";
 
 function Navbar() {
   const { language, currentLang } = useGlobal();
@@ -21,7 +21,7 @@ function Navbar() {
     <div>
       <nav className="px-[7vw] py-[1vw] bg-[#E94B4B] md:rounded-b-[3vw] rounded-b-[6vw] fixed w-[100vw] left-0 top-0 right-0 z-[40]">
         <ul className="md:flex items-center justify-between hidden">
-          <li>
+          <li className="md:w-[8vw] text-center">
             <NavLink
               to="/products"
               className="text-[1vw] text-[#fff] hover:opacity-60"
@@ -29,7 +29,7 @@ function Navbar() {
               {language["1"]}
             </NavLink>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <NavLink
               to="/about"
               className="text-[1vw] text-[#fff] hover:opacity-60"
@@ -37,7 +37,7 @@ function Navbar() {
               {language["2"]}
             </NavLink>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <a
               href="/#tops"
               className="text-[1vw] text-[#fff] hover:opacity-60"
@@ -45,16 +45,17 @@ function Navbar() {
               {language["tops"]}
             </a>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <a href="/" className="text-[1vw] text-[#fff] hover:opacity-60">
-              <img
+              {/* <img
                 className="w-[10vw]"
                 src={require("../assets/img/logo.png")}
                 alt=""
-              />
+              /> */}
+              <HeaderLogo />
             </a>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <NavLink
               to="/terms"
               className="text-[1vw] text-[#fff] hover:opacity-60"
@@ -62,7 +63,7 @@ function Navbar() {
               {language["4"]}
             </NavLink>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] rounded-[.3vw]  border border-transparent hover:bg-transparent hover:border-white transition cursor-pointer">
               <img
                 src={`/assets/img/${currentLang}.png`}
@@ -82,7 +83,7 @@ function Navbar() {
               </select>
             </button>
           </li>
-          <li>
+          <li className="md:w-[8vw] text-center">
             <a href="tel:+998995595353">
               <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] px-[1vw] rounded-[.3vw] text-[1vw] text-[#fff] border border-transparent hover:bg-transparent hover:border-white transition">
                 <ContactMan />

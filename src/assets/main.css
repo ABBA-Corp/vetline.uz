@@ -473,7 +473,10 @@ input[type=number] {
         left: 0;
     }
 }
-
+.bg-slide{
+    background-image: url(img/bgslide.png);
+    background-size: cover;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

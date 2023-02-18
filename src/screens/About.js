@@ -32,9 +32,11 @@ function About() {
             only five centuries, but also the leap into electronic.
           </p>
           <div className="flex gap-[2vw] mt-[2vw]">
-            <button className=" md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-[#EA5252] text-[#fff] hover:bg-[#db1616] transition">
-              Video
-            </button>
+            <a href="https://youtu.be/ZvWbYsqNUpQ" target='_blank'>
+              <button className=" md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-[#EA5252] text-[#fff] hover:bg-[#db1616] transition">
+                Video
+              </button>
+            </a>
             <a href="#contact">
               <button className="border-black border md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-transparent hover:bg-[#000] hover:text-[#fff] transition">
                 Aloqa
