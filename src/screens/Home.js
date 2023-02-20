@@ -144,12 +144,12 @@ function Home() {
                         </ul>
                         <div className="md:flex grid grid-cols-2 items-center mt-[2vw] gap-[1vw] md:pb-0 pb-[3vw]">
                           <Link to={"/products"}>
-                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
+                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a] md:w-auto w-full">
                               {language.top["5"]}
                             </button>
                           </Link>
                           <Link to={"/about"}>
-                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a]">
+                            <button className="md:p-[.7vw] p-[2vw] px-[1.4vw] md:text-[1vw] text-[4.2vw] md:rounded-[.6vw] rounded-[2.6vw] text-[#fff] bg-[#ffffff3d] hover:bg-[#ffffff9a] md:w-auto w-full">
                               {language.top["6"]}
                             </button>
                           </Link>
@@ -253,12 +253,12 @@ function Home() {
                       {language.abouttext}
                     </p>
                     <div className="flex mt-[4vw] gap-[2vw]">
-                      <Link to="/about">
+                      <Link to="/about" className="w-full">
                         <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
                           {language.top["6"]}
                         </button>
                       </Link>
-                      <a href="#contact">
+                      <a href="#contact" className="w-full">
                         <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw]  md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
                           {language["5"]}
                         </button>

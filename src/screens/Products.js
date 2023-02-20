@@ -51,9 +51,10 @@ function Products() {
       <>
         {visible && (
           <div className="fixed left-0 top-0 w-full h-screen bg-[#08080841] z-[999] flex justify-center items-center">
-            <div className="bg-white p-[2vw] rounded-[1vw] w-[60vw] relative modal-income">
+            <div className="bg-white p-[2vw] rounded-[1vw] md:w-[60vw] w-[90vw] relative modal-income">
               <button
-                className="absolute text-[2vw] right-[2vw] top-[1vw] w-[2vw] h-[2vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
+                type="button"
+                className="absolute md:text-[2vw] text-[5vw] right-[2vw] top-[1vw] md:w-[2vw] md:h-[2vw] w-[5vw] h-[5vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
                 onClick={() => setVisible(false)}
               >
                 &times;
@@ -62,18 +63,21 @@ function Products() {
                 <img
                   src={data?.thumbnail}
                   alt="img"
-                  className="w-[25vw] h-[25vw] object-contain bg-[#F3F3F3] p-[2vw] rounded-[1vw]"
+                  className="md:w-[25vw] md:h-[25vw] w-[45vw] h-[45vw] object-contain bg-[#F3F3F3] p-[2vw] rounded-[1vw]"
                 />
                 <div className="flex flex-col items-start p-[4vw]">
-                  <h1 className="text-[2vw]"> {data[`name_${currentLang}`]}</h1>
-                  <p className="text-[1vw] font-[500]">
+                  <h1 className="md:text-[2vw] text-[4vw]">
+                    {" "}
+                    {data[`name_${currentLang}`]}
+                  </h1>
+                  <p className="md:text-[1vw] text-[2.4vw] font-[500]">
                     {data[`subtitle_${currentLang}`]}
                   </p>
-                  <p className="text-[1vw] font-[500] my-[2vw] mb-[4vw]">
+                  <p className="md:text-[1vw] text-[2.4vw] font-[500] my-[2vw] mb-[4vw]">
                     {data[`description_${currentLang}`]}
                   </p>
                   <button
-                    className="p-[.4vw] px-[3.2vw] bg-[#E94B4B] hover:bg-[#c51515] transition rounded-[6vw] text-[1.3vw] text-[#fff] font-extralight"
+                    className="p-[.4vw] px-[3.2vw] bg-[#E94B4B] hover:bg-[#c51515] transition rounded-[6vw] md:text-[1.3vw] text-[3vw] text-[#fff] font-extralight"
                     onClick={() => setPurchase(true)}
                   >
                     {language["send"]}
@@ -87,55 +91,59 @@ function Products() {
           <div className="fixed left-0 top-0 w-full h-screen bg-[#08080841] z-[999] flex justify-center items-center">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="bg-white p-[2vw] rounded-[1vw] w-[40vw] relative modal-income"
+              className="bg-white p-[2vw] rounded-[1vw] md:w-[40vw] w-[90vw] relative modal-income"
             >
               <button
                 type="button"
-                className="absolute text-[2vw] right-[2vw] top-[1vw] w-[2vw] h-[2vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
+                className="absolute md:text-[2vw] text-[5vw] right-[2vw] top-[1vw] md:w-[2vw] md:h-[2vw] w-[5vw] h-[5vw] bg-[#E94B4B] text-[#fff] rounded-[3vw] flex items-center justify-center"
                 onClick={() => setPurchase(false)}
               >
                 &times;
               </button>
               <div className="flex flex-col items-start">
-                <h1 className="text-[2vw] uppercase mb-[2vw]">
+                <h1 className="md:text-[2vw] text-[4vw] uppercase mb-[2vw]">
                   {language["form"]}
                 </h1>
-                <p className="text-[1.4vw] pl-[1vw]">{language["name"]}</p>
+                <p className="md:text-[1.4vw] text-[2.4vw] pl-[1vw]">
+                  {language["name"]}
+                </p>
                 <input
                   type="text"
                   placeholder={language["name"]}
-                  className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                  className="font-[200] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
                   {...register("name")}
                 />
 
-                <p className="text-[1.4vw] pl-[1vw]">{language["phone"]}</p>
+                <p className="md:text-[1.4vw] text-[2.4vw] pl-[1vw]">
+                  {language["phone"]}
+                </p>
                 <input
                   type="number"
                   placeholder={language["phone"]}
-                  className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                  className="font-[200] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
                   {...register("phone")}
                 />
 
-                <p className="text-[1.4vw] pl-[1vw]">
+                <p className="md:text-[1.4vw] text-[2.4vw] pl-[1vw]">
                   {language["typeproduct"]}
                 </p>
                 <input
                   defaultValue={data[`name_${currentLang}`]}
-                  className="font-[500] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                  className="font-[500] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
                   disabled
                 />
-                <div className="flex gap-[1vw]">
+                <div className="flex gap-[1vw] w-full">
                   <button
                     type="submit"
-                    className="p-[.4vw] px-[1.2vw] bg-[#E94B4B] hover:bg-[#c51515] transition rounded-[6vw] text-[1vw] text-[#fff] font-extralight"
+                    className="md:w-auto w-full md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#E94B4B] hover:bg-[#c51515] transition rounded-[6vw] md:text-[1vw] text-[2.5vw] text-[#fff] font-extralight"
                   >
                     {language["send"]}
                   </button>
                   <button
-                    className="p-[.4vw]  px-[1.2vw] bg-[#ffffff] rounded-[6vw] text-[1vw] text-[#000] border border-[black]"
+                    className="md:w-auto w-full md:p-[.4vw]  p-[1.4vw]  px-[1.2vw] bg-[#ffffff] rounded-[6vw] md:text-[1vw] text-[2.5vw] text-[#000] border border-[black]"
                     type="submit"
                   >
                     {language["writetelegram"]}
@@ -192,11 +200,14 @@ function Products() {
               {data[`subtitle_${currentLang}`]}
             </p>
             <div className="flex md:gap-[1vw] gap-[2vw] md:mt-0 mt-[2vw] items-center ">
-              <button className="border-black border md:bg-transparent bg-[#000] md:text-[#000] text-[#fff] hover:bg-black hover:text-[#fff] md:px-[1.6vw] md:py-[.5vw] px-[4.6vw] py-[1.5vw] md:rounded-[2vw] rounded-[6vw] md:text-[1vw] text-[3vw] whitespace-nowrap">
+              <button
+                className="border-black border md:bg-transparent bg-[#000] md:text-[#000] text-[#fff] hover:bg-black hover:text-[#fff] md:px-[1.6vw] md:py-[.5vw] px-[4.6vw] py-[1.5vw] md:rounded-[2vw] rounded-[6vw] md:text-[1vw] text-[3vw] whitespace-nowrap"
+                onClick={() => setPurchase(true)}
+              >
                 {language.top["5"]}
               </button>
 
-              <button>
+              <button onClick={() => setVisible(true)}>
                 <ViewSvg />
               </button>
             </div>

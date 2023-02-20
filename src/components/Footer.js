@@ -1,4 +1,5 @@
 import React from "react";
+import { HeaderLogo } from "./Svgs";
 
 function Footer() {
   return (
@@ -6,15 +7,14 @@ function Footer() {
       <div className="md:bg-[#F8F3EC] bg-[#E94A4A] md:p-[2vw] p-[10vw] px-[6vw] relative z-20">
         <div className="flex gap-[10vw] justify-center md:items-center">
           <div className="flex flex-col md:justify-center justify-between">
-            <div className="flex items-center gap-[1vw] md:w-[20vw] w-[40vw] md:flex-row flex-col">
+            <div className="flex items-center gap-[1vw] md:w-[20vw] w-[40vw] md:flex-row flex-col md:mb-[1vw]">
               <img
                 src={require("../assets/img/logo.png")}
                 className="w-[10vw] md:block hidden"
               />
-              <img
-                src={require("../assets/img/footerlogo.png")}
-                className="w-[40vw] md:hidden block"
-              />
+              <div className="w-[40vw] md:hidden block">
+                <HeaderLogo />
+              </div>
               <p className="md:text-[1vw] text-[3vw] md:text-[#000] text-[#fff]">
                 Yuqori va sifatli hayvonlar ozuqasi va dorilari
               </p>

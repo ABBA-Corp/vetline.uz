@@ -99,11 +99,12 @@ function Navbar() {
           >
             ☰
           </button>
-          <img
+          {/* <img
             className="w-[30vw]"
             src={require("../assets/img/logo.png")}
             alt=""
-          />
+          /> */}
+          <HeaderLogo />
           <a href="tel:+998995595353">
             <button className="text-[6vw] bg-[#F9F2EB] w-[10vw] h-[10vw] rounded-[50%] text-[#E94B4B] flex items-center justify-center">
               <PhoneNav />
@@ -119,16 +120,16 @@ function Navbar() {
               <NavLink to="/products">{language["1"]}</NavLink>
             </li>
             <li>
-              <a href="/">{language["2"]}</a>
+              <NavLink to="/about">{language["2"]}</NavLink>
             </li>
             <li>
-              <a href="/">{language["3"]}</a>
+              <a href="/#tops">{language["tops"]}</a>
             </li>
             <li>
-              <a href="/">{language["4"]}</a>
+              <NavLink to="/terms">{language["4"]}</NavLink>
             </li>
             <select
-              onClick={changeLanguage}
+              onChange={changeLanguage}
               className="text-[#fff]  bg-transparent outline-none"
             >
               <option value="uz">Uz</option>

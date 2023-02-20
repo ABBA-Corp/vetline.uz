@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ViewSvg } from "../components/Svgs";
+import React, { useEffect } from "react";
 
 function Terms() {
   useEffect(() => {
@@ -8,13 +6,13 @@ function Terms() {
   }, []);
 
   return (
-    <div className="p-[7vw] pt-[10vw] bg-[#E94B4B] font-semibold">
+    <div className="p-[7vw] md:pt-[10vw] pt-[30vw] bg-[#E94B4B] font-semibold">
       <div>
-        <h1 className="text-[2vw] text-[#fff] font-bold">
+        <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold">
           Foydalanish shartlari
         </h1>
         <br />
-        <p className="text-[1.2vw] text-[#fff] font-normal">
+        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -26,7 +24,7 @@ function Terms() {
           including versions of Lorem Ipsum.
         </p>
         <br />
-        <p className="text-[1.2vw] text-[#fff] font-normal">
+        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -38,7 +36,7 @@ function Terms() {
           including versions of Lorem Ipsum.
         </p>
         <br />
-        <p className="text-[1.2vw] text-[#fff] font-normal">
+        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -50,7 +48,7 @@ function Terms() {
           including versions of Lorem Ipsum.
         </p>
         <br />
-        <p className="text-[1.2vw] text-[#fff] font-normal">
+        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
