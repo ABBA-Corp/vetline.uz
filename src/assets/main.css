@@ -331,13 +331,20 @@ input[type=number] {
         -o-transform: scale(0);
     }
 
-    100% {
+    99% {
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
     }
+    100%{
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+}
 }
 
 .two:hover~.after-bg::after {
@@ -400,6 +407,13 @@ input[type=number] {
     .feather {
         display: none;
     }
+    .notifbg2{
+        transform: scale(3.5) !important;
+        -webkit-transform: scale(3.5) !important;
+        -moz-transform: scale(3.5) !important;
+        -ms-transform: scale(3.5) !important;
+        -o-transform: scale(3.5) !important;
+}
 }
 
 @media(min-width:768px) {

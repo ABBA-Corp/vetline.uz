@@ -120,7 +120,7 @@ function Products() {
                 </p>
                 <input
                   type="number"
-                  placeholder={language["phone"]}
+                  placeholder={language["phone"]} maxLength={12}
                   className="font-[200] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                   required
                   {...register("phone")}

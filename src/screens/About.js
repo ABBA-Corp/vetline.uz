@@ -14,7 +14,15 @@ function About() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   };
   const { currentLang, language } = useGlobal();
   return (
@@ -32,7 +40,7 @@ function About() {
             only five centuries, but also the leap into electronic.
           </p>
           <div className="flex gap-[2vw] mt-[2vw]">
-            <a href="https://youtu.be/ZvWbYsqNUpQ" target='_blank'>
+            <a href="https://youtu.be/ZvWbYsqNUpQ" target="_blank">
               <button className=" md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-[#EA5252] text-[#fff] hover:bg-[#db1616] transition">
                 Video
               </button>
@@ -126,7 +134,7 @@ function About() {
                   <img
                     src={item?.photo}
                     alt=""
-                    className="w-full h-[30vw] object-cover rounded-t-[2vw]"
+                    className="w-full md:h-[30vw] h-[60vw] object-cover rounded-t-[2vw]"
                   />
                   <div className="absolute w-full bottom-0 p-[2vw] bg-gradient-to-b from-[#ffffff00] to-[#00000073] opacity-hover">
                     <h2 className="text-[#ffff] text-[1.4vw] font-bold">

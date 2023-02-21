@@ -1,7 +1,9 @@
 import React from "react";
 import { HeaderLogo } from "./Svgs";
-
+import { useGlobal } from "../redux/selectors";
+import { Link } from "react-router-dom";
 function Footer() {
+  const { language } = useGlobal();
   return (
     <>
       <div className="md:bg-[#F8F3EC] bg-[#E94A4A] md:p-[2vw] p-[10vw] px-[6vw] relative z-20">
@@ -31,49 +33,49 @@ function Footer() {
           <div className="flex md:gap-[10vw] gap-[4vw] justify-center md:items-center md:flex-row flex-col">
             <div className="flex flex-col gap-[.6vw]">
               <h1 className="font-bold md:text-[1.7vw] text-[3.7vw] uppercase md:text-black text-[#fff]">
-                kompaniyamiz
+                {language["6"]}
               </h1>
               <a
-                href="#"
+                href="#tops"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
               >
-                Mahsulotlarimiz
+                {language["6"]}
               </a>
-              <a
-                href="#"
+              <Link
+                to={"/about"}
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
               >
-                Biz haqimizda
-              </a>
+                {language["2"]}
+              </Link>
               <a
-                href="#"
+                href="#tops"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
               >
-                chegirma
+                {language["tops"]}
               </a>
-              <a
-                href="#"
+              <Link
+                to={"/terms"}
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
               >
-                yangiliklar
-              </a>
+                {language["4"]}
+              </Link>
               <a
-                href="#"
+                href="/#faq"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] "
               >
                 F.A.Q
               </a>
               <a
-                href="#"
+                href="/#after"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
               >
-                Oldin va keyn
+                {language["after"]}
               </a>
             </div>
 
             <div className="flex flex-col gap-[.6vw]">
               <h1 className="font-bold md:text-[1.7vw] text-[3.7vw] uppercase md:text-black text-[#fff]">
-                ALoqa
+                {language["5"]}
               </h1>
               <a
                 href="#"

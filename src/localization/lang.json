@@ -5,6 +5,8 @@
         "3": "Foydali ma’lumotlar",
         "4": "Foydalanish shartlari",
         "5": "Aloqa",
+        "6": "Kompaniyamiz",
+        "after": "Oldin va keyin",
         "top": {
             "1": "Mushuklar maxssus ovqati",
             "2": "Hozirgi kundagi eng sifatli mushukchalar ozuqasi",
@@ -42,7 +44,8 @@
         "typeproduct": "Maxsulot turi",
         "writetelegram": "Telegramdan yozish",
         "form": "FORMANI TO'LDIRING",
-        "top1": "'Wetline' xohlayman, qachon olib berasiz?"
+        "top1": "'Wetline' xohlayman, qachon olib berasiz?",
+        "results_treatment": "Davolanish natijalari"
     },
     "ru": {
         "1": "Продукты",
@@ -50,8 +53,10 @@
         "3": "Полезная информация",
         "4": "Условия использования",
         "5": "Связь",
+        "6": "Наша компания",
+        "after": "До и после",
         "form": "ЗАПОЛНИТЕ ФОРМУ",
-
+        "results_treatment": "Результаты лечения",
         "top": {
             "1": "Специальный корм для кошек",
             "2": "Самый качественный корм для котят на сегодняшний день",
@@ -96,8 +101,10 @@
         "3": "Useful information",
         "4": "Terms of Use",
         "5": "Contact",
+        "6": "Our company",
+        "after": "Before and after",
         "form": "FILL THE FORM",
-
+        "results_treatment": "Results of treatment",
         "top": {
             "1": "Special cat food",
             "2": "The best quality kitten food available today",

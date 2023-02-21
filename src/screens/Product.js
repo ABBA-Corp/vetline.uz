@@ -63,7 +63,7 @@ function Product() {
               <p className="text-[1.4vw] pl-[1vw]">{language["phone"]}</p>
               <input
                 type="number"
-                placeholder={language["phone"]}
+                placeholder={language["phone"]} maxLength={12}
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 {...register("phone")}
@@ -99,7 +99,7 @@ function Product() {
       <div className="feather3"></div>
       <div className="grid linear-bg  grid-cols-2 gap-[6vw] px-[17vw] py-[6vw]">
         <div>
-          <img src={product?.thumbnail} className="w-[70%]" alt="" />
+          <img src={product?.thumbnail} className="w-[70%] md:h-[70vh] object-contain" alt="" />
         </div>
         <div className="flex flex-col">
           <div>
@@ -107,7 +107,7 @@ function Product() {
               {product?.[`name_${currentLang}`]}
             </h1>
             <p className="text-[1.2vw] text-[#fff] leading-[2.2vw] mb-[10vw]">
-              {product?.[`subtitle_${currentLang}`]}
+              {product?.[`description_${currentLang}`]}
             </p>
           </div>
           <div className="flex gap-[1vw]">
@@ -123,28 +123,28 @@ function Product() {
               </button>
             </a>
           </div>
-          <div className="flex items-center mt-[5vw]">
+          {/* <div className="flex items-center mt-[5vw]">
             <img
               src="https://i.giphy.com/media/deKZM8D0orxwQ18qtB/giphy.webp"
               alt=""
               className="w-[4vw] h-[4vw] object-contain invert-[1]"
             />
             <p className="text-[1.2vw]">Ko'proq ma'lumot uchun scroll qiling</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="p-[7vw]">
-        <div className="py-[4vw]">
-          {/* <h1 className="text-[2vw] text-[#fff] font-bold">
+        {/* <div className="py-[4vw]">
+          <h1 className="text-[2vw] text-[#fff] font-bold">
             Davolanish natijalari
-          </h1> */}
+          </h1>
           <p className="text-[1.2vw] text-[#fff] ">
             {product?.[`description_${currentLang}`]}
           </p>
-        </div>
+        </div> */}
         <div className="py-[4vw]">
           <h1 className="text-[2vw] text-[#fff] font-bold mb-[2vw]">
-            Davolanish natijalari
+            {language?.results_treatment}
           </h1>
           <div className="grid grid-cols-2 gap-[3vw]">
             {product?.results_set?.map((item, i) => (

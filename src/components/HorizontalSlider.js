@@ -71,6 +71,7 @@ export default function HorizontalSlider({ lang }) {
               <input
                 type="number"
                 placeholder={language["phone"]}
+                maxLength={12}
                 className="font-[200] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 {...register("phone")}
@@ -163,8 +164,8 @@ export default function HorizontalSlider({ lang }) {
                 <button
                   className="border-black border md:bg-transparent bg-[#000] md:text-[#000] text-[#fff] hover:bg-black hover:text-[#fff] md:px-[1.6vw] md:py-[.5vw] px-[4.6vw] py-[1.5vw] md:rounded-[2vw] rounded-[6vw] md:text-[1vw] text-[3vw] whitespace-nowrap"
                   onClick={() => {
-                    setPurchase(true)
-                    setData(item)
+                    setPurchase(true);
+                    setData(item);
                   }}
                 >
                   {language.top["5"]}

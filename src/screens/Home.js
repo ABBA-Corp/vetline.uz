@@ -98,7 +98,7 @@ function Home() {
                         </div>
                       )}
                       {notificationOne.includes(i) || (
-                        <div className="absolute md:w-[20vw] w-[25vw] h-[6vw] bg-[#F9943B] md:left-[70%] left-[35%] top-[35%] rounded-[1vw] pr-[3vw] hidden md:block notifbg2">
+                        <div className="absolute md:w-[20vw] w-[26vw] h-[6vw] bg-[#F9943B] md:left-[70%] left-[36%] md:top-[35%] top-[20%] z-[9] rounded-[1vw] pr-[3vw]  notifbg2">
                           <div className="flex gap-[1.4vw] relative p-[.4vw] items-start">
                             <button
                               className="text-[#fff] text-[2vw] leading-[1.7vw]"
@@ -128,13 +128,13 @@ function Home() {
                   )}
                   <img
                     src={require("../assets/img/cat.png")}
-                    className="absolute md:w-[20vw] w-[80vw] md:left-[40vw] left-[10vw] md:top-auto md:bottom-[20vw] top-[40vw]"
+                    className="absolute md:w-[20vw] w-[80vw] md:left-[40vw] left-[10vw] md:top-auto md:bottom-[20vw] top-[60vw]"
                     alt=""
                   />
-                  <div className="bg-[#F0D7B3] bg-slide flex justify-center items-end p-[5vw] md:h-[100vh] h-[200vw]">
-                    <div className="bg-[#E94A4A] p-[1vw] px-[4vw] md:w-[70%] w-[100%] items-center md:rounded-[2vw] rounded-[5vw] relative z-20 flex justify-between md:flex-row flex-col-reverse md:h-auto h-[77vw]">
+                  <div className="bg-[#F0D7B3] bg-slide flex justify-center items-end p-[5vw] md:h-[100vh] h-[220vw]">
+                    <div className="bg-[#E94A4A] p-[1vw] md:pt-[1vw] pt-[6vw] px-[4vw] md:w-[70%] w-[100%] items-center md:rounded-[2vw] rounded-[5vw] relative z-20 flex justify-between md:flex-row flex-col-reverse md:h-auto h-[80vw]">
                       <div className="flex flex-col ">
-                        <h1 className="font-medium text-[#fff] md:text-[1.8vw] text-[5.2vw] md:text-left text-center">
+                        <h1 className="font-medium text-[#fff] md:text-[1.8vw] text-[5.2vw] md:text-left text-center md:whitespace-normal whitespace-nowrap text-ellipsis md:m-0 m-auto w-[90%] overflow-hidden">
                           {language.top["1"]}
                         </h1>
                         <ul className="md:text-[1vw] text-[4vw]  text-[#fff] list-disc md:px-0 px-[6vw]">
@@ -253,7 +253,7 @@ function Home() {
                       {language.abouttext}
                     </p>
                     <div className="flex mt-[4vw] gap-[2vw]">
-                      <Link to="/about" className="w-full">
+                      <Link to="/about" className="md:w-auto w-full">
                         <button className="border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:rounded-[2vw] rounded-[5vw] md:text-[1vw] text-[4vw]  md:w-auto w-full hover:bg-[#000] hover:text-[#fff] transition">
                           {language.top["6"]}
                         </button>
@@ -282,21 +282,12 @@ function Home() {
               className="absolute bottom-[2vw] right-0 w-[44vw] md:block hidden"
             />
           </div>
-          <div className="flex flex-col my-[4vw] items-start">
+          <div className="flex flex-col my-[4vw] items-start" id="after">
             <div className="flex justify-between w-full pr-[2vw] items-end">
               <h1 className="text-[3vw] relative pb-[1vw] bottom-[-1vw] z-[40] font-bold text-[#E94A4A] bg-[#F8F3EC] pt-[1vw] px-[2vw] rounded-t-[1vw] md:block hidden uppercase captie">
                 {language["feedback"]["1"]}
               </h1>
               <div className="flex gap-[3vw] relative md:w-auto w-full ">
-                {/* <button className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full z-[40] ">
-                  Xo'roz
-                </button>
-                <button className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full">
-                  Ho'kiz
-                </button>
-                <button className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full">
-                  Novvos
-                </button> */}
                 {tabNames?.map((item, i) => (
                   <button
                     className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full"
@@ -433,7 +424,7 @@ function Home() {
               </div>
             </div>
             <div className=" bg-[#FFE7C3] md:rounded-[1vw] rounded-[3vw] md:p-[4vw] p-[2vw]">
-              <div className="md:p-[4vw] p-[4vw] justify-between flex flex-col md:gap-[2vw] bg-white md:rounded-0 rounded-[2vw]">
+              <div className="md:p-[4vw] p-[4vw] justify-between flex flex-col md:gap-[2vw] bg-white md:rounded-0 rounded-[2vw]" id="faq">
                 {[0, 1, 2, 3, 4, 5, 6].map((item, i) => (
                   <div
                     key={i}
@@ -503,6 +494,7 @@ function Home() {
                   type="number"
                   {...register("phone")}
                   placeholder={language["phone"]}
+                  maxLength={12}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"
                 />
                 <textarea
