@@ -229,7 +229,7 @@ function Products() {
         {/* <button className="md:w-full  md:border-0 md:border-b-[.3vw] transition md:border-b-[#fff] md:p-[1vw] md:opacity-100 hover:opacity-100 md:bg-transparent bg-[#ffeed6] md:rounded-[0px] rounded-[4vw] md:px-[1vw] px-[2.4vw] p-[1vw] hover:bg-[#E94B4B] hover:text-[#fff]  border border-[#ffeed6] ">
           Tovuqlar uchun
         </button> */}
-        {categorys?.map((item) => (
+        {categorys?.map((item) => ( 
           <button
             key={item?.id}
             className="md:w-full w-[49%] md:border-0 md:border-b-[.3vw] transition md:border-b-[#fff] md:p-[1vw]  md:bg-transparent bg-[#ffeed6] md:rounded-[0px] rounded-[4vw] md:px-[1vw] px-[2.4vw] p-[1vw] hover:bg-[#E94B4B] hover:text-[#fff] border border-[#ffeed6] whitespace-nowrap overflow-hidden text-ellipsis"
