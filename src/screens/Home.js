@@ -98,8 +98,22 @@ function Home() {
                         </div>
                       )}
                       {notificationOne.includes(i) || (
-                        <div className="absolute md:w-[20vw] w-[26vw] h-[6vw] bg-[#F9943B] md:left-[70%] left-[36%] md:top-[35%] top-[20%] z-[9] rounded-[1vw] pr-[3vw]  notifbg2">
-                          <div className="flex gap-[1.4vw] relative p-[.4vw] items-start">
+                        <div className="absolute md:w-[20vw] w-[26vw] h-[6vw] bg-[#F9943B] md:left-[70%] left-[36%] md:top-[35%] top-[20%] z-[9] rounded-[1vw] pl-[3vw]  notifbg2">
+                          <div className="flex gap-[1.4vw] relative p-[.4vw] items-start justify-between">
+                            
+                            <div className="flex flex-col pl-[2vw]">
+                              <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
+                                Mushukcha
+                              </h1>
+                              <img
+                                src={require("../assets/img/multicat.png")}
+                                className="w-[4vw] absolute top-[-2vw] left-[-2vw]"
+                                alt=""
+                              />
+                              <p className="font-medium text-[#fff] text-[.8vw]">
+                                {language.top1}
+                              </p>
+                            </div>
                             <button
                               className="text-[#fff] text-[2vw] leading-[1.7vw]"
                               onClick={() => {
@@ -108,19 +122,6 @@ function Home() {
                             >
                               &times;
                             </button>
-                            <div className="flex flex-col">
-                              <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
-                                Mushukcha
-                              </h1>
-                              <p className="font-medium text-[#fff] text-[.8vw]">
-                                {language.top1}
-                              </p>
-                              <img
-                                src={require("../assets/img/multicat.png")}
-                                className="w-[4vw] absolute top-[-2vw] right-[-1vw]"
-                                alt=""
-                              />
-                            </div>
                           </div>
                         </div>
                       )}
@@ -405,15 +406,15 @@ function Home() {
               </div>
             </div>
             <div className="flex p-[3vw] justify-center gap-[4vw] md:py-[3vw] py-[6vw]">
-              <Link to={"/products"}>
+              <Link to={"/products"} className={'md:w-auto w-full'}>
                 <button className="md:border-black md:bg-transparent bg-[#E94A4A] border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] md:text-[#000] text-[#fff] hover:bg-[#000] hover:text-[#fff] transition">
-                  Mahsulotlarimiz
+                  {language['1']}
                 </button>
               </Link>
               <div className="relative md:w-auto w-full">
                 <a href="#contact">
                   <button className="md:border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] relative z-20 md:bg-[#F8F3EC] bg-[#fff] md:text-[#000] text-[#E94A4A] hover:bg-[#000] hover:text-[#fff] transition">
-                    Bog`lanish
+                    {language['5']}
                   </button>
                 </a>
                 <img
@@ -424,7 +425,10 @@ function Home() {
               </div>
             </div>
             <div className=" bg-[#FFE7C3] md:rounded-[1vw] rounded-[3vw] md:p-[4vw] p-[2vw]">
-              <div className="md:p-[4vw] p-[4vw] justify-between flex flex-col md:gap-[2vw] bg-white md:rounded-0 rounded-[2vw]" id="faq">
+              <div
+                className="md:p-[4vw] p-[4vw] justify-between flex flex-col md:gap-[2vw] bg-white md:rounded-0 rounded-[2vw]"
+                id="faq"
+              >
                 {[0, 1, 2, 3, 4, 5, 6].map((item, i) => (
                   <div
                     key={i}
@@ -444,7 +448,7 @@ function Home() {
                           : "md:bg-[#fffcf87e]"
                       }  rounded-[1vw] cursor-pointer`}
                     >
-                      <h1 className="md:text-[1.4vw] text-[3.4vw] font-bold whitespace-nowrap overflow-hidden text-ellipsis">
+                      <h1 className="md:text-[1.4vw] text-[3.4vw] font-bold whitespace-nowrap overflow-hidden text-ellipsis md:w-auto w-[90%]">
                         Qo’ylarga Niolitdan kuniga nechi mahal berish kerak?
                       </h1>
 
@@ -493,6 +497,11 @@ function Home() {
                   required
                   type="number"
                   {...register("phone")}
+onInput={(e) =>
+                  (e.target.value = e.target.value
+                    .replace(/[^0-9.]/g, "")
+                    .replace(/(\..*?)\..*/g, "$1"))
+                }
                   placeholder={language["phone"]}
                   maxLength={12}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"

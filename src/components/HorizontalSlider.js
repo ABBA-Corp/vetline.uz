@@ -69,14 +69,18 @@ export default function HorizontalSlider({ lang }) {
                 {language["phone"]}
               </p>
               <input
-                type="number"
+                type="text"
                 placeholder={language["phone"]}
-                maxLength={12}
+                maxLength={"12"}
+                onInput={(e) =>
+                  (e.target.value = e.target.value
+                    .replace(/[^0-9.]/g, "")
+                    .replace(/(\..*?)\..*/g, "$1"))
+                }
                 className="font-[200] md:text-[1vw] text-[2vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 {...register("phone")}
               />
-
               <p className="md:text-[1.4vw] text-[2.4vw] pl-[1vw]">
                 {language["typeproduct"]}
               </p>

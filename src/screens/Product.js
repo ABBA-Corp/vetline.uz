@@ -67,6 +67,11 @@ function Product() {
                 className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
                 required
                 {...register("phone")}
+onInput={(e) =>
+                  (e.target.value = e.target.value
+                    .replace(/[^0-9.]/g, "")
+                    .replace(/(\..*?)\..*/g, "$1"))
+                }
               />
 
               <p className="text-[1.4vw] pl-[1vw]">{language["typeproduct"]}</p>

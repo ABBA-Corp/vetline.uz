@@ -19,7 +19,7 @@ function About() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2
         }
       }
     ]
@@ -191,9 +191,14 @@ function About() {
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
           />
           <input
-            type="text"
+            type="number"
             placeholder="Telefon raqamingiz"
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
+            onInput={(e) =>
+              (e.target.value = e.target.value
+                .replace(/[^0-9.]/g, "")
+                .replace(/(\..*?)\..*/g, "$1"))
+            }
           />
           <p className="md:text-[1vw] text-[2.6vw]">
             shu yerda o’z savolingiz yoki taklifingiz. bo’lmasam otziv
@@ -201,11 +206,13 @@ function About() {
           </p>
           <div className="flex gap-[1vw]">
             <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#e94a4a] hover:bg-[#ee1f1f] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#fff] w-full">
-              Yuborish
+              {language['send']}
             </button>
-            <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#F9F9F9] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#000] w-full hover:text-[#fff] hover:bg-[#000] transition">
-              Manzilimiz
-            </button>
+            <a href="https://www.google.com/maps/place/Amir+Temur+Square/@41.311139,69.279593,75358m/data=!3m1!1e3!4m5!3m4!1s0x0:0x81095e06b654b845!8m2!3d41.3111391!4d69.2795927?hl=en" className="w-full">
+              <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#F9F9F9] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#000] w-full hover:text-[#fff] hover:bg-[#000] transition">
+              {language['address']}
+              </button>
+            </a>
           </div>
         </div>
       </div>

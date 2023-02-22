@@ -113,7 +113,7 @@ function Navbar() {
           <ul
             className="absolute bg-[#E94B4B] text-[#fff] flex flex-col gap-[2vw] items-center p-[4vw]  rounded-b-[4vw] text-center text-[4vw] left-[5vw] w-[90vw] transition-[.8s]"
             style={{
-              top: active ? "25vw" : "-100vh"
+              top: active ? "23vw" : "-100vh"
             }}
           >
             <li>

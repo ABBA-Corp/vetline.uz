@@ -285,7 +285,7 @@ input[type=number] {
 }
 
 .notifbg2 {
-    background-image: url(img/notifbg.png);
+    background-image: url(img/notifbg2.png);
     background-size: 100%;
     animation: notifbg2 1s both;
     -webkit-animation: notifbg2 1s both;

@@ -37,25 +37,25 @@ function Footer() {
               </h1>
               <a
                 href="#tops"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["6"]}
               </a>
               <Link
                 to={"/about"}
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["2"]}
               </Link>
               <a
                 href="#tops"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["tops"]}
               </a>
               <Link
                 to={"/terms"}
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["4"]}
               </Link>
@@ -67,7 +67,7 @@ function Footer() {
               </a>
               <a
                 href="/#after"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["after"]}
               </a>
@@ -79,25 +79,25 @@ function Footer() {
               </h1>
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 +998995595353
               </a>
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 +998946776769
               </a>
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 info@vetline.uz
               </a>
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 info@neolit.uz
               </a>
@@ -109,9 +109,9 @@ function Footer() {
               </a>
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] capitalize"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
-                Uchtepa tumani 12 uy
+                Uchtepa tumani 12-uy
               </a>
             </div>
           </div>
