@@ -13,52 +13,37 @@ function Terms() {
         </h1>
         <br />
         <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Vet Line Animal Health - uy hayvonlari va chorva mollari uchun
+          qo'shimchalar, vitaminlar va dori-darmonlar kabi turli xil hayvonlar
+          salomatligi mahsulotlarini taklif qiluvchi brend. Ushbu mahsulotlardan
+          foydalanish hayvonning o'ziga xos ehtiyojlariga va veterinar
+          tavsiyasiga qarab farq qilishi mumkin.
+          <br />
+          Vet Line Animal Health mahsulotlaridan foydalanish bo'yicha ba'zi
+          umumiy ko'rsatmalar:
+          <br />
+          Hayvoningizga biron bir mahsulotni ishlatishdan oldin veterinar bilan
+          maslahatlashing, chunki ular hayvonning sog'lig'i va shaxsiy
+          ehtiyojlariga qarab aniq tavsiyalar berishi mumkin.
+          <br />
+          Mahsulot yorlig'ida yoki veterinar ko'rsatmasida tavsiya etilgan
+          dozalash va qo'llash bo'yicha ko'rsatmalarga rioya qiling.
+          <br />
+          Barcha mahsulotlarni salqin, quruq, bolalar va hayvonlar qo'li
+          etmaydigan joyda saqlang.
+          <br />
+          Agar mahsulotdan foydalangandan so'ng hayvoningiz biron bir nojo'ya
+          ta'sirga duch kelsa, darhol foydalanishni to'xtating va
+          veterinaringizga murojaat qiling.
+          <br />
+          Odamlar yoki boshqa hayvonlar uchun Vet Line Animal Health
+          mahsulotidan foydalanmang.
+          <br />
+          Umuman olganda, hayvoningizning salomatligi va farovonligini
+          ta'minlash uchun Vet Line Animal Health mahsulotlaridan mas'uliyat
+          bilan va professional tavsiyalarga muvofiq foydalanish muhimdir.
         </p>
         <br />
-        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-        <br />
-        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-        <br />
-        <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] font-normal">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
       </div>
     </div>
   );

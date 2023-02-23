@@ -10,10 +10,13 @@ function Footer() {
         <div className="flex gap-[10vw] justify-center md:items-center">
           <div className="flex flex-col md:justify-center justify-between">
             <div className="flex items-center gap-[1vw] md:w-[20vw] w-[40vw] md:flex-row flex-col md:mb-[1vw]">
-              <img
+              {/* <img
                 src={require("../assets/img/logo.png")}
                 className="w-[10vw] md:block hidden"
-              />
+                
+              /> */}
+                <HeaderLogo footer/>
+
               <div className="w-[40vw] md:hidden block">
                 <HeaderLogo />
               </div>
@@ -118,10 +121,10 @@ function Footer() {
         </div>
       </div>
       <div className="bg-white p-[2vw] justify-center items-center flex gap-[3vw] relative z-20">
-        <p className="text-[1.2vw]">Copyright © Neolit | Designed by</p>
-        <p className="text-[1.2vw] text-[#E94A4A]">abba marketing</p>
-        <p className="text-[1.2vw]">- Powered by</p>
-        <p className="text-[1.2vw] text-[#E94A4A]">ABBA</p>
+        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">Copyright © Neolit | Designed by</p>
+        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">abba marketing</p>
+        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">- Powered by</p>
+        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">ABBA</p>
       </div>
     </>
   );

@@ -14,7 +14,6 @@ import {
   ReactCompareSliderImage
 } from "react-compare-slider";
 import { Link, useLocation } from "react-router-dom";
-import div from "react-scroll-wheel-handler";
 import HorizontalSlider from "../components/HorizontalSlider";
 import { useGlobal } from "../redux/selectors";
 import { getRestApi, tabNames } from "../components/utils";
@@ -36,12 +35,14 @@ function Home() {
   const [categories, setCategories] = useState([]);
   const [notification, setNotification] = useState([]);
   const [tab, setTab] = useState(0);
+  const [faq, setFaq] = useState([]);
   const [notificationOne, setNotificationOne] = useState([]);
   const [visible, setVisible] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   useEffect(() => {
     getRestApi("products/", setProducts);
     getRestApi("categories/", setCategories);
+    getRestApi("faqs/", setFaq);
     setTimeout(() => {
       setVisible(true);
     }, 2000);
@@ -100,7 +101,6 @@ function Home() {
                       {notificationOne.includes(i) || (
                         <div className="absolute md:w-[20vw] w-[26vw] h-[6vw] bg-[#F9943B] md:left-[70%] left-[36%] md:top-[35%] top-[20%] z-[9] rounded-[1vw] pl-[3vw]  notifbg2">
                           <div className="flex gap-[1.4vw] relative p-[.4vw] items-start justify-between">
-                            
                             <div className="flex flex-col pl-[2vw]">
                               <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
                                 Mushukcha
@@ -304,22 +304,27 @@ function Home() {
             </div>
             <div className="w-full relative z-[30] shadow-[0px_0px_10px_rgba(0,0,0,0.7)] bg-[#F8F3EC] p-[2vw] rounded-[1vw] rounded-tl-[0vw]">
               <div className="relative">
-                <ReactCompareSlider
-                  itemOne={
-                    <ReactCompareSliderImage
-                      src="https://www.equilac.com/wp-content/uploads/2022/03/horse-milk-1.jpg"
-                      className="w-full h-[50vw] object-cover rounded-[1vw] overflow-hidden"
-                      alt=""
-                    />
-                  }
-                  itemTwo={
-                    <ReactCompareSliderImage
-                      src="https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-helena-lopes-1996333.jpg&fm=jpg"
-                      className="w-full h-[50vw] object-cover rounded-[1vw] overflow-hidden"
-                      alt=""
-                    />
-                  }
-                />
+                {tabNames?.map(
+                  (item, i) =>
+                    tab === i && (
+                      <ReactCompareSlider
+                        itemOne={
+                          <ReactCompareSliderImage
+                            src={item?.before}
+                            className="w-full h-[50vw] object-cover rounded-[1vw] overflow-hidden"
+                            alt=""
+                          />
+                        }
+                        itemTwo={
+                          <ReactCompareSliderImage
+                            src={item?.after}
+                            className="w-full h-[50vw] object-cover rounded-[1vw] overflow-hidden"
+                            alt=""
+                          />
+                        }
+                      />
+                    )
+                )}
                 <div className="md:absolute md:text-[#fff] text-[#000] md:font-medium font-bold md:text-[1.6vw] text-[3.6vw] rounded-[1vw] md:bg-[#E94A4A] p-[2vw] px-[3vw] z-40 md:w-[80%] flex justify-center left-[10%] bottom-[3vw]">
                   <div className="flex gap-[1vw] items-center md:w-[35%] w-[45%]">
                     <h1>{language["feedback"]["2"]}</h1>
@@ -389,7 +394,7 @@ function Home() {
               <div className="flex md:flex-col hover:opacity-[.7] cursor-pointer transition items-center md:w-[20%] text-center md:gap-[2vw] gap-[4vw]">
                 <BargSvg />
                 <h1 className="text-[#E94A4A] md:text-[1.7vw] text-[3.7vw] font-bold">
-                  Mahsulotlarimiz 100% organic{" "}
+                  Mahsulotlarimiz 100% organik{" "}
                 </h1>
               </div>
               <div className="flex md:flex-col hover:opacity-[.7] cursor-pointer transition items-center md:w-[20%] text-center md:gap-[2vw] gap-[4vw]">
@@ -406,15 +411,15 @@ function Home() {
               </div>
             </div>
             <div className="flex p-[3vw] justify-center gap-[4vw] md:py-[3vw] py-[6vw]">
-              <Link to={"/products"} className={'md:w-auto w-full'}>
+              <Link to={"/products"} className={"md:w-auto w-full"}>
                 <button className="md:border-black md:bg-transparent bg-[#E94A4A] border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] md:text-[#000] text-[#fff] hover:bg-[#000] hover:text-[#fff] transition">
-                  {language['1']}
+                  {language["1"]}
                 </button>
               </Link>
               <div className="relative md:w-auto w-full">
                 <a href="#contact">
                   <button className="md:border-black border px-[1.6vw] md:py-[.5vw] py-[1.5vw] md:w-auto w-full rounded-[2vw] md:text-[1vw] text-[3.2vw] relative z-20 md:bg-[#F8F3EC] bg-[#fff] md:text-[#000] text-[#E94A4A] hover:bg-[#000] hover:text-[#fff] transition">
-                    {language['5']}
+                    {language["5"]}
                   </button>
                 </a>
                 <img
@@ -429,7 +434,7 @@ function Home() {
                 className="md:p-[4vw] p-[4vw] justify-between flex flex-col md:gap-[2vw] bg-white md:rounded-0 rounded-[2vw]"
                 id="faq"
               >
-                {[0, 1, 2, 3, 4, 5, 6].map((item, i) => (
+                {faq?.map((item, i) => (
                   <div
                     key={i}
                     className=" md:rounded-[1vw] md:border-b-0 border-b border-b-[#00000080] md:bg-[#fffcf87e] bg-[#fff] overflow-hidden"
@@ -448,16 +453,15 @@ function Home() {
                           : "md:bg-[#fffcf87e]"
                       }  rounded-[1vw] cursor-pointer`}
                     >
-                      <h1 className="md:text-[1.4vw] text-[3.4vw] font-bold whitespace-nowrap overflow-hidden text-ellipsis md:w-auto w-[90%]">
-                        Qo’ylarga Niolitdan kuniga nechi mahal berish kerak?
+                      <h1 className="md:text-[1.4vw] text-[3.4vw] font-bold whitespace-nowrap overflow-hidden text-ellipsis  w-[90%]">
+                        {item[`faq_${currentLang}`]}
                       </h1>
 
                       {activeAccardion === i ? <CloseSvg /> : <ToBottomArrow />}
                     </div>
                     {activeAccardion === i && (
                       <p className="md:text-[1.2vw] text-[3.2vw] p-[2vw] px-[4vw]">
-                        5 mahal berish kerak Новости и полезьные блоги Неолите 5
-                        mahal berish kerak Новости и полезьные блоги Неолите
+                        {item[`answer_${currentLang}`]}
                       </p>
                     )}
                   </div>
@@ -497,11 +501,11 @@ function Home() {
                   required
                   type="number"
                   {...register("phone")}
-onInput={(e) =>
-                  (e.target.value = e.target.value
-                    .replace(/[^0-9.]/g, "")
-                    .replace(/(\..*?)\..*/g, "$1"))
-                }
+                  onInput={(e) =>
+                    (e.target.value = e.target.value
+                      .replace(/[^0-9.]/g, "")
+                      .replace(/(\..*?)\..*/g, "$1"))
+                  }
                   placeholder={language["phone"]}
                   maxLength={12}
                   className="bg-[#fff] outline-[#E94A4A] md:rounded-[.4vw] rounded-[1.4vw] md:p-[1vw] p-[2vw] md:px-[2vw] px-[3vw] md:text-[1vw] text-[3vw]"

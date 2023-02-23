@@ -66,10 +66,7 @@ input[type=number] {
     width: 1px;
 }
 
-.linear-bg {
-    background-image: url(img/bgproduct.png);
-    background-size: 100%;
-}
+
 
 .feather {
     position: absolute;
@@ -338,13 +335,14 @@ input[type=number] {
         -ms-transform: scale(1);
         -o-transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: none;
         -webkit-transform: none;
         -moz-transform: none;
         -ms-transform: none;
         -o-transform: none;
-}
+    }
 }
 
 .two:hover~.after-bg::after {
@@ -407,16 +405,22 @@ input[type=number] {
     .feather {
         display: none;
     }
-    .notifbg2{
+
+    .notifbg2 {
         transform: scale(3.5) !important;
         -webkit-transform: scale(3.5) !important;
         -moz-transform: scale(3.5) !important;
         -ms-transform: scale(3.5) !important;
         -o-transform: scale(3.5) !important;
-}
+    }
 }
 
 @media(min-width:768px) {
+    .linear-bg {
+        background-image: url(img/bgproduct.png);
+        background-size: 100%;
+    }
+
     .hover-on {
         cursor: pointer;
     }
@@ -487,10 +491,12 @@ input[type=number] {
         left: 0;
     }
 }
-.bg-slide{
+
+.bg-slide {
     background-image: url(img/bgslide.png);
     background-size: cover;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

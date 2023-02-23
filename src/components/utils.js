@@ -12,11 +12,15 @@ export async function getRestApi(url, setData) {
 export const tabNames = [
   {
     id: 0,
-    name: "Xo'roz"
+    name: " Mushuk ",
+    before: require('../assets/img/2.png'),
+    after: require('../assets/img/1.png'),
   },
   {
     id: 1,
-    name: "Ho'kiz"
+    name: "Kuchuk",
+    before: require('../assets/img/3.png'),
+    after: require('../assets/img/4.png'),
   },
   {
     id: 2,

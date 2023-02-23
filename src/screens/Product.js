@@ -63,15 +63,16 @@ function Product() {
               <p className="text-[1.4vw] pl-[1vw]">{language["phone"]}</p>
               <input
                 type="number"
-                placeholder={language["phone"]} maxLength={12}
-                className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
-                required
-                {...register("phone")}
-onInput={(e) =>
+                placeholder={language["phone"]}
+                onInput={(e) =>
                   (e.target.value = e.target.value
                     .replace(/[^0-9.]/g, "")
                     .replace(/(\..*?)\..*/g, "$1"))
                 }
+                maxLength={12}
+                className="font-[200] text-[1vw] outline-none w-full mb-[1vw] border-b p-[1vw] focus:border-b-[#0097d3]"
+                required
+                {...register("phone")}
               />
 
               <p className="text-[1.4vw] pl-[1vw]">{language["typeproduct"]}</p>
@@ -102,28 +103,32 @@ onInput={(e) =>
       <div className="feather"></div>
       <div className="feather2"></div>
       <div className="feather3"></div>
-      <div className="grid linear-bg  grid-cols-2 gap-[6vw] px-[17vw] py-[6vw]">
+      <div className="grid linear-bg  md:grid-cols-2 gap-[6vw] md:px-[17vw] px-[10vw] py-[6vw] md:pt-[6vw] pt-[20vw]">
         <div>
-          <img src={product?.thumbnail} className="w-[70%] md:h-[70vh] object-contain" alt="" />
+          <img
+            src={product?.thumbnail}
+            className="md:w-[70%] md:h-[70vh] h-[60vw] md:m-0 m-auto object-contain"
+            alt=""
+          />
         </div>
         <div className="flex flex-col">
           <div>
-            <h1 className="text-[2vw] text-[#fff] font-semibold mb-[1vw]">
+            <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-semibold mb-[1vw]">
               {product?.[`name_${currentLang}`]}
             </h1>
-            <p className="text-[1.2vw] text-[#fff] leading-[2.2vw] mb-[10vw]">
+            <p className="md:text-[1.2vw] text-[3.2vw] text-[#fff] md:leading-[2.2vw] leading-[4.2vw] md:mb-[10vw] mb-[5vw]">
               {product?.[`description_${currentLang}`]}
             </p>
           </div>
-          <div className="flex gap-[1vw]">
+          <div className="flex md:gap-[1vw] gap-[4vw]">
             <button
-              className="p-[.4vw] px-[1.5vw] min-w-[11vw] bg-[#ffffff] rounded-[6vw] text-[1.3vw] text-[#000] hover:bg-[#000] hover:text-[#fff] transition"
+              className="md:p-[.4vw] p-[1.4vw] px-[1.5vw] min-w-[11vw] bg-[#ffffff] rounded-[6vw] md:text-[1.3vw] text-[3.3vw] md:w-auto w-full text-[#000] hover:bg-[#000] hover:text-[#fff] transition"
               onClick={() => setPurchase(true)}
             >
               Sotib olish
             </button>
-            <a href="tel:+998995595353">
-              <button className="p-[.4vw] px-[1.5vw] min-w-[11vw] bg-[#E94B4B] hover:bg-[#e60d0d] rounded-[6vw] text-[1.3vw] text-[#fff]  transition">
+            <a href="tel:+998995595353" className="md:w-auto w-full">
+              <button className="md:p-[.4vw] p-[1.4vw] px-[1.5vw] min-w-[11vw] bg-[#E94B4B] hover:bg-[#e60d0d] rounded-[6vw] md:text-[1.3vw] text-[3.3vw] md:w-auto w-full text-[#fff] md:border-none border border-white  transition">
                 Aloqa
               </button>
             </a>
@@ -148,7 +153,7 @@ onInput={(e) =>
           </p>
         </div> */}
         <div className="py-[4vw]">
-          <h1 className="text-[2vw] text-[#fff] font-bold mb-[2vw]">
+          <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold mb-[2vw]">
             {language?.results_treatment}
           </h1>
           <div className="grid grid-cols-2 gap-[3vw]">

@@ -8,7 +8,7 @@
         "6": "Kompaniyamiz",
         "after": "Oldin va keyin",
         "top": {
-            "1": "Mushuklar maxssus ovqati",
+            "1": "Mushuklar maxsus ovqati",
             "2": "Hozirgi kundagi eng sifatli mushukchalar ozuqasi",
             "3": " 100% tabiiy va to'yimli",
             "4": "Uy hayvonlaringiz taomnomasidan zavqlanishi ta'minlaymiz!",
@@ -30,7 +30,7 @@
             "6": "Necha kun davolanadi",
             "7": "Necha kunda ta'sir qiladi"
         },
-        "tops": "Top maxsulotlar",
+        "tops": "Top mahsulotlar",
         "abouttitle": "Vetline veterinariya kompaniyasi",
         "abouttext": "Vetline veterinariya kompaniyasi sizga nafaqat veterinariya mahsulotlarining yangi va sifatli assortimentini taqdim etadi. Ozuqa va vitaminlar sohasida ham ushbu sohada yetakchi hisoblanadi. Vetline kompaniyasi 2012. 'Vetline' veterinariya kompaniyasi sizga nafaqat veterinariya mahsulotlarining yangi va sifatli assortimentlarini taqdim etadi.Ozuqa va vitaminlar sohasida ham u ushbu sohada yetakchi hisoblanadi.Vetline 2012-yilda ishlab chiqarilgan.",
         "more": "Kompaniya haqida batafsil",
@@ -97,9 +97,9 @@
     },
     "en": {
         "1": "Our Products",
-        "2": "About Us",
+        "2": "About us",
         "3": "Useful information",
-        "4": "Terms of Use",
+        "4": "Terms of use",
         "5": "Contact",
         "6": "Our company",
         "after": "Before and after",

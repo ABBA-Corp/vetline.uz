@@ -238,9 +238,13 @@ export const PhoneNav = () => (
   </svg>
 );
 
-export const HeaderLogo = () => (
+export const HeaderLogo = ({ footer = false }) => (
   <svg
-    className="md:w-[10vw] md:h-[4vw] w-[30vw] h-[12vw]"
+    className={
+      footer
+        ? "md:w-[14vw] md:h-[5vw] w-[30vw] h-[12vw]"
+        : "md:w-[10vw] md:h-[4vw] w-[30vw] h-[12vw]"
+    }
     viewBox="0 0 135 61"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

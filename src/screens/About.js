@@ -33,11 +33,13 @@ function About() {
             Vetline Korxonasi
           </h1>
           <p className="text-black mt-[5vw] md:text-[1.2vw] text-[3.2vw]">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic.
+            "Vet Line" korxona - bu uy hayvonlari va qoramollar salomatligi
+            uchun turli xil mahsulotlar qo'shimchalar, vitaminlar, vaktsinalar
+            va dori-darmonlarn ishlab chiqaruvchi korxona. "Vet Line" korxonasi
+            mahsulotlari veterinar tavsiyasiga yoki ko'rsatmalariga muvofiq
+            ishlatilishi kerak. Uy hayvonlari egalari mahsulotlarni ishlatishdan
+            oldin veterinar bilan gaplashishlari va ularni hayvonlarning o'ziga
+            xos ehtiyojlariga qarab qanday ishlatishni so'rashlari kerak
           </p>
           <div className="flex gap-[2vw] mt-[2vw]">
             <a href="https://youtu.be/ZvWbYsqNUpQ" target="_blank">
@@ -76,7 +78,7 @@ function About() {
               1000
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Animals types
+              Davolangan tovuqlar soni
             </p>
           </div>
           <div className="flex flex-col hover-on two">
@@ -87,7 +89,7 @@ function About() {
               95
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Animals types
+              Davolangan itlar soni
             </p>
           </div>
           <div className="flex flex-col hover-on three">
@@ -98,7 +100,7 @@ function About() {
               304
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Animals types
+              Davolangan mushuklar soni
             </p>
           </div>
           <div className="flex flex-col hover-on four">
@@ -109,17 +111,21 @@ function About() {
               394
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Animals types
+              Davolangan sigirlar soni
             </p>
           </div>
           <div className={`md:block hidden after-bg left-${activeHover}`}></div>
         </div>
         <p className="text-[#fff] md:text-[1.2vw] text-[3.2vw] md:w-[60%] w-[80%] m-auto mt-[5vw] relative z-20">
-          Biznini vetline bilan 2000 tadan kop tovuqlar davolandam va hozi zor
-          yuriwipti mijozlarimiz bizdan mamanu n tovuqqi etiwi boyicha u semiirb
-          qoptiBiznini vetline bilan 2000 tadan kop tovuqlar davolandam va hozi
-          zor yuriwipti mijozlarimiz bizdan mamanu n tovuqqi etiwi boyicha u
-          semiirb qopti
+          Vet Line Animal Health - bu dunyoda ko'plab mamlakatlarda faoliyat
+          yuritadigan, hayvonlar uchun tibbiy vositalarni ishlab chiqaruvchi va
+          savdo qiluvchi kompaniya. Bu kompaniya hayvonlarni davolash, tibbiy
+          xizmat ko'rsatish, o'simlik mahsulotlari va xilma-xil vositalarni
+          ta'minlashga yo'naltirilgan. Vet Line Animal Health turli hayvon
+          turlari uchun o'z mahsulotlarini ishlab chiqaradi, shular ichida keng
+          qamrovli va kichik hayvonlar, kasalliklarga chora berish, ularni
+          davolash va muntazam xususiyatli hayvonlarni muhofaza qilishda
+          ishlatiladigan dori preparatlari mavjud.
         </p>
       </div>
       <div className="bg-[#E94B4B] py-[5vw]">
@@ -165,11 +171,12 @@ function About() {
           />
         </div>
         <p className="text-[#fff] md:text-[1.2vw] text-[3.2vw] mt-[2vw] md:w-[80%] w-[90%] m-auto ">
-          Biznini vetline bilan 2000 tadan kop tovuqlar davolandam va hozi zor
-          yuriwipti mijozlarimiz bizdan mamanu n tovuqqi etiwi boyicha u semiirb
-          qoptiBiznini vetline bilan 2000 tadan kop tovuqlar davolandam va hozi
-          zor yuriwipti mijozlarimiz bizdan mamanu n tovuqqi etiwi boyicha u
-          semiirb qopti
+          Bizning Vet Line Animal Health hayvonlar uchun ishlab chiqarilgan
+          barcha mahsulotlarni test qiladi va yuqori sifat natijalarni
+          ta'minlash uchun harakat qiladi. Kompaniya ayni vaqtda xaridorga
+          ishonchli xizmat ko'rsatishni ta'minlash maqsadida ishlab chiqarilgan
+          barcha mahsulotlarga daromadli narxlar bilan ta'minlashga harakat
+          qiladi.
         </p>
       </div>
       <div
@@ -206,11 +213,14 @@ function About() {
           </p>
           <div className="flex gap-[1vw]">
             <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#e94a4a] hover:bg-[#ee1f1f] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#fff] w-full">
-              {language['send']}
+              {language["send"]}
             </button>
-            <a href="https://www.google.com/maps/place/Amir+Temur+Square/@41.311139,69.279593,75358m/data=!3m1!1e3!4m5!3m4!1s0x0:0x81095e06b654b845!8m2!3d41.3111391!4d69.2795927?hl=en" className="w-full">
+            <a
+              href="https://www.google.com/maps/place/Amir+Temur+Square/@41.311139,69.279593,75358m/data=!3m1!1e3!4m5!3m4!1s0x0:0x81095e06b654b845!8m2!3d41.3111391!4d69.2795927?hl=en"
+              className="w-full"
+            >
               <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#F9F9F9] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#000] w-full hover:text-[#fff] hover:bg-[#000] transition">
-              {language['address']}
+                {language["address"]}
               </button>
             </a>
           </div>

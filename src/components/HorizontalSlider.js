@@ -71,6 +71,7 @@ export default function HorizontalSlider({ lang }) {
               <input
                 type="text"
                 placeholder={language["phone"]}
+
                 maxLength={"12"}
                 onInput={(e) =>
                   (e.target.value = e.target.value
