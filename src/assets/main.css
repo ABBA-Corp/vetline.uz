@@ -80,6 +80,27 @@ input[type=number] {
     -webkit-animation: trans alternate-reverse infinite 34s;
 }
 
+.custom-slick .slick-arrow {
+    bottom: -3vw !important;
+    position: absolute;
+    top: auto;
+    transform: scale(2.3);
+    -webkit-transform: scale(2.3);
+    -moz-transform: scale(2.3);
+    -ms-transform: scale(2.3);
+    -o-transform: scale(2.3);
+}
+
+.custom-slick .slick-arrow.slick-next{
+    right: 5vw;
+}
+.custom-slick .slick-arrow.slick-prev{
+    right: 10vw;
+    left: auto;
+
+}
+
+
 .feather2 {
     position: absolute;
     width: 10vw;
@@ -419,6 +440,9 @@ input[type=number] {
     .linear-bg {
         background-image: url(img/bgproduct.png);
         background-size: 100%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-color: #ff4a4a;
     }
 
     .hover-on {

@@ -6,13 +6,16 @@ import { getRestApi } from "../components/utils";
 import { useGlobal } from "../redux/selectors";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import Slider from "react-slick";
 function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [results, setResults] = useState([]);
   const [purchase, setPurchase] = useState(false);
   const pathname = useLocation();
   useEffect(() => {
     getRestApi("products/" + id, setProduct);
+    getRestApi("results/", setResults);
   }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +34,12 @@ function Product() {
       setPurchase(false);
     });
   };
-
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  };
   const { language, currentLang } = useGlobal();
   return (
     <div className=" pt-[5vw] bg-[#E94B4B]">
@@ -133,38 +141,39 @@ function Product() {
               </button>
             </a>
           </div>
-          {/* <div className="flex items-center mt-[5vw]">
+          <div className="flex items-center mt-[5vw]">
             <img
               src="https://i.giphy.com/media/deKZM8D0orxwQ18qtB/giphy.webp"
               alt=""
               className="w-[4vw] h-[4vw] object-contain invert-[1]"
             />
             <p className="text-[1.2vw]">Ko'proq ma'lumot uchun scroll qiling</p>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="p-[7vw]">
-        {/* <div className="py-[4vw]">
+        <div className="py-[4vw]">
           <h1 className="text-[2vw] text-[#fff] font-bold">
-            Davolanish natijalari
+            {language?.results_treatment}
           </h1>
           <p className="text-[1.2vw] text-[#fff] ">
             {product?.[`description_${currentLang}`]}
           </p>
-        </div> */}
-        <div className="py-[4vw]">
+        </div>
+        <div className="py-[4vw] custom-slick">
           <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold mb-[2vw]">
             {language?.results_treatment}
           </h1>
-          <div className="grid grid-cols-2 gap-[3vw]">
-            {product?.results_set?.map((item, i) => (
-              <div className="relative hoverer" key={i}>
+          {/* <div className="grid grid-cols-2 gap-[3vw]"> */}
+          <Slider {...settings}>
+            {results?.map((item, i) => (
+              <div className="relative hoverer p-[1vw]" key={i}>
                 <img
                   src={item?.photo}
                   alt=""
                   className="w-full h-[30vw] object-cover rounded-t-[2vw]"
                 />
-                <div className="absolute w-full opacity-hover bottom-0 p-[2vw] bg-gradient-to-b from-[#ffffff00] to-black">
+                <div className="absolute w-[95%] opacity-hover bottom-[1vw] p-[2vw] bg-gradient-to-b from-[#ffffff00] to-black">
                   <h2 className="text-[#ffff] text-[1.4vw] font-bold">
                     {item?.[`title_${currentLang}`]}
                   </h2>
@@ -174,7 +183,9 @@ function Product() {
                 </div>
               </div>
             ))}
-            {/* <div className="relative hoverer">
+          </Slider>
+
+          {/* <div className="relative hoverer">
               <img
                 src="https://cdn.pixabay.com/photo/2019/05/16/19/38/cock-4207970_1280.jpg"
                 alt=""
@@ -189,7 +200,7 @@ function Product() {
                 </p>
               </div>
             </div> */}
-          </div>
+          {/* </div> */}
         </div>
         <div className="py-[4vw]">
           <HorizontalSlider lang={language} />

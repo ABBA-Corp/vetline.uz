@@ -201,6 +201,7 @@ function About() {
             type="text"
             placeholder={language["phone"]}
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
+            maxLength={12}
             onInput={(e) =>
               (e.target.value = e.target.value
                 .replace(/[^0-9.]/g, "")
