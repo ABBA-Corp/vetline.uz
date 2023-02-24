@@ -19,25 +19,32 @@ function Terms() {
           foydalanish hayvonning o'ziga xos ehtiyojlariga va veterinar
           tavsiyasiga qarab farq qilishi mumkin.
           <br />
+          <br />
           Vet Line Animal Health mahsulotlaridan foydalanish bo'yicha ba'zi
           umumiy ko'rsatmalar:
+          <br />
           <br />
           Hayvoningizga biron bir mahsulotni ishlatishdan oldin veterinar bilan
           maslahatlashing, chunki ular hayvonning sog'lig'i va shaxsiy
           ehtiyojlariga qarab aniq tavsiyalar berishi mumkin.
           <br />
+          <br />
           Mahsulot yorlig'ida yoki veterinar ko'rsatmasida tavsiya etilgan
           dozalash va qo'llash bo'yicha ko'rsatmalarga rioya qiling.
           <br />
+          <br />
           Barcha mahsulotlarni salqin, quruq, bolalar va hayvonlar qo'li
           etmaydigan joyda saqlang.
+          <br />
           <br />
           Agar mahsulotdan foydalangandan so'ng hayvoningiz biron bir nojo'ya
           ta'sirga duch kelsa, darhol foydalanishni to'xtating va
           veterinaringizga murojaat qiling.
           <br />
+          <br />
           Odamlar yoki boshqa hayvonlar uchun Vet Line Animal Health
           mahsulotidan foydalanmang.
+          <br />
           <br />
           Umuman olganda, hayvoningizning salomatligi va farovonligini
           ta'minlash uchun Vet Line Animal Health mahsulotlaridan mas'uliyat

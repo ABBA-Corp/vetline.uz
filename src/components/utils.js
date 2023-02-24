@@ -23,7 +23,10 @@ export const tabNames = [
     after: require('../assets/img/4.png'),
   },
   {
-    id: 2,
-    name: "Novvos"
-  }
+    id: 1,
+    name: "Ot",
+    before: require('../assets/img/5.png'),
+    after: require('../assets/img/6.png'),
+  },
+
 ];

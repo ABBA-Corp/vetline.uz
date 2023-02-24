@@ -15,13 +15,13 @@ function Footer() {
                 className="w-[10vw] md:block hidden"
                 
               /> */}
-                <HeaderLogo footer/>
+              <HeaderLogo footer />
 
-              <div className="w-[40vw] md:hidden block">
+              {/* <div className="w-[40vw] md:hidden block">
                 <HeaderLogo />
-              </div>
+              </div> */}
               <p className="md:text-[1vw] text-[3vw] md:text-[#000] text-[#fff]">
-                Yuqori va sifatli hayvonlar ozuqasi va dorilari
+                Hayvonlar uchun yuqori sifatli asl ozuqalar hamda dori-darmonla
               </p>
             </div>
             <iframe
@@ -121,10 +121,16 @@ function Footer() {
         </div>
       </div>
       <div className="bg-white p-[2vw] justify-center items-center flex gap-[3vw] relative z-20">
-        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">Copyright © Neolit | Designed by</p>
-        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">abba marketing</p>
-        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">- Powered by</p>
-        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">ABBA</p>
+        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">
+          Copyright © Neolit | Designed by
+        </p>
+        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">
+          abba marketing
+        </p>
+        <p className="md:text-[1.2vw] text-[2.2vw] md:text-black text-[#E94A4A]">
+          - Powered by
+        </p>
+        <p className="md:text-[1.2vw] text-[2.2vw] text-[#E94A4A]">Abba marketing</p>
       </div>
     </>
   );

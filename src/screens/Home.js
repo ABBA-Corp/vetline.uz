@@ -175,37 +175,24 @@ function Home() {
             <div className="md:block hidden absolute top-[-4vw] text-[1vw] left-[50%] translate-x-[-50%] translate-y-0 text-center bg-scrolbottom px-[7vw] p-[2vw] pt-[1.5vw]">
               {language.top["7"]}
             </div>
-            <div className="md:flex hidden justify-between overflow-hidden rounded-t-[1vw]">
-              {/* <div className="w-[32.8%] relative bg-[url('https://nationaltoday.com/wp-content/uploads/2021/07/Guinea-Pig-Appreciation-Day.jpg')] h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer">
-                <div className="w-full bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s]"></div>
-                <p className="text-[#fff] z-[20] text-[2vw] text-center">
-                  {language.types["1"]}
-                </p>
-              </div>
-              <div className="w-[32.8%] bg-[url('https://www.bhwt.org.uk/wp-content/uploads/2021/11/Dora-sah-web.jpg')] relative h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer">
-                <div className="w-full bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s]"></div>
-                <p className="text-[#fff] z-[20] text-[2vw] text-center">
-                  {language.types["2"]}
-                </p>
-              </div>
-              <div className="w-[32.8%] bg-[url('https://i.insider.com/5c20d8ee01c0ea245970caa3?width=1000&format=jpeg&auto=webp')] relative h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer  justify-center">
-                <div className="w-full bg-[#00000065]  h-full absolute top-0 left-0 to-top transition-[.3s]"></div>
-                <p className="text-[#fff] z-[20] text-[2vw] text-center">
-                  {language.types["3"]}
-                </p>
-              </div> */}
+            <div className="flex md:flex-row flex-col justify-between overflow-hidden rounded-t-[1vw]">
               {categories?.map((item) => (
                 <Link
                   to={"/products/" + item?.id}
-                  className="w-[32.8%] relative h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer justify-center"
+                  className="md:w-[32.8%] w-full relative md:h-[40vw] bg-cover p-[4vw] flex items-end card cursor-pointer justify-center gap-[4vw]"
                   style={{
-                    backgroundImage: `url(${item?.photo})`
+                    backgroundImage:
+                      window.innerWidth > 768 && `url(${item?.photo})`
                   }}
                 >
-                  <div className="w-full bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s]"></div>
-                  <p className="text-[#fff] z-[20] text-[2vw] text-center">
-                    {item[`title_${currentLang}`]}
-                  </p>
+                  <img src={item?.photo} className="w-[30vw] h-[25vw] object-cover rounded-[2vw]  md:hidden block" alt="" />
+                  <div className="w-full md:bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s] "></div>
+                  <div className="md:static flex flex-col gap-[2vw] items-start">
+                    <p className="md:text-[#fff] z-[20] md:text-[2vw] text-[5vw] md:text-center md:font-normal font-semibold">
+                      {item[`title_${currentLang}`]}
+                    </p>
+                    <button className="bg-[#E94A4A] p-[1vw] px-[5vw] text-[#fff] rounded-[2vw] md:hidden block">{language.top["6"]}</button>
+                  </div>
                 </Link>
               ))}
             </div>

@@ -190,16 +190,16 @@ function About() {
         />
         <div className="flex flex-col justify-center  bg-[#ffffff] rounded-[2vw] gap-[2vw] md:p-[2vw] p-[4vw] py-[3vw] md:w-[35vw] w-[75vw] md:m-0 m-auto">
           <h1 className="md:text-[2vw] text-[4vw] font-bold">
-            Savol va takliflar uchun
+            {language["questions"]}
           </h1>
           <input
             type="text"
-            placeholder="Ismingiz"
+            placeholder={language["name"]}
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
           />
           <input
-            type="number"
-            placeholder="Telefon raqamingiz"
+            type="text"
+            placeholder={language["phone"]}
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
             onInput={(e) =>
               (e.target.value = e.target.value
@@ -207,10 +207,7 @@ function About() {
                 .replace(/(\..*?)\..*/g, "$1"))
             }
           />
-          <p className="md:text-[1vw] text-[2.6vw]">
-            shu yerda o’z savolingiz yoki taklifingiz. bo’lmasam otziv
-            qoldirishingiz yoki hamkorlik masalasida{" "}
-          </p>
+          <p className="md:text-[1vw] text-[2.6vw]">{language["que"]}</p>
           <div className="flex gap-[1vw]">
             <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#e94a4a] hover:bg-[#ee1f1f] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#fff] w-full">
               {language["send"]}

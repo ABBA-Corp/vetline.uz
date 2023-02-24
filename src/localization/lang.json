@@ -35,10 +35,11 @@
         "abouttext": "Vetline veterinariya kompaniyasi sizga nafaqat veterinariya mahsulotlarining yangi va sifatli assortimentini taqdim etadi. Ozuqa va vitaminlar sohasida ham ushbu sohada yetakchi hisoblanadi. Vetline kompaniyasi 2012. 'Vetline' veterinariya kompaniyasi sizga nafaqat veterinariya mahsulotlarining yangi va sifatli assortimentlarini taqdim etadi.Ozuqa va vitaminlar sohasida ham u ushbu sohada yetakchi hisoblanadi.Vetline 2012-yilda ishlab chiqarilgan.",
         "more": "Kompaniya haqida batafsil",
         "questions": "Savol va takliflar uchun",
-        "questions2": "Mahsulot, xizmatlar yoki hamkorlik masalalarida barcha savol, taklif va e'tirozlarni shu bo'limda yozib qoldirishingiz mumkin.",
+        "questions2": "Savol, taklif, e'tiroz yoki buyurtmalarni to'g'ridan to'g'ri yo'llashingiz mumkin",
         "name": "Ismingiz",
         "phone": "Telefon raqamingiz",
         "send": "Yuborish",
+        "que": "Kompanayimizga yo'llamoqchi bo'lgan savol va takliflaringiz, mahsulotlar uchun buyurtma, hamkorlikni yo'lga qo'yish uchun ushbu tugmani bosing",
         "comment": "Fikringiz",
         "address": "Manzilimiz",
         "typeproduct": "Maxsulot turi",
@@ -57,6 +58,7 @@
         "after": "До и после",
         "form": "ЗАПОЛНИТЕ ФОРМУ",
         "results_treatment": "Результаты лечения",
+        "que": "Нажмите на эту кнопку, чтобы отправить вопросы и предложения в нашу компанию, заказать продукцию, начать сотрудничество",
         "top": {
             "1": "Специальный корм для кошек",
             "2": "Самый качественный корм для котят на сегодняшний день",
@@ -141,6 +143,7 @@
             "6": "How many days will be treated",
             "7": "How many days will it take effect"
         },
-        "top1": "I want 'Wetline', when will you deliver?"
+        "top1": "I want 'Wetline', when will you deliver?",
+        "que": "Click this button to send your questions and suggestions to our company, to order products, to start cooperation"
     }
 }
