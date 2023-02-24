@@ -25,8 +25,8 @@ export const tabNames = [
   {
     id: 1,
     name: "Ot",
-    before: require('../assets/img/5.png'),
-    after: require('../assets/img/6.png'),
+    before: "https://www.equilac.com/wp-content/uploads/2022/03/horse-milk-1.jpg",
+    after: "https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-helena-lopes-1996333.jpg&fm=jpg",
   },
 
 ];
