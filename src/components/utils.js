@@ -13,20 +13,21 @@ export const tabNames = [
   {
     id: 0,
     name: " Mushuk ",
-    before: require('../assets/img/2.png'),
-    after: require('../assets/img/1.png'),
+    before: require("../assets/img/2.png"),
+    after: require("../assets/img/1.png")
   },
   {
     id: 1,
     name: "Kuchuk",
-    before: require('../assets/img/3.png'),
-    after: require('../assets/img/4.png'),
+    before: require("../assets/img/3.png"),
+    after: require("../assets/img/4.png")
   },
   {
     id: 1,
     name: "Ot",
-    before: "https://www.equilac.com/wp-content/uploads/2022/03/horse-milk-1.jpg",
-    after: "https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-helena-lopes-1996333.jpg&fm=jpg",
-  },
-
+    before:
+      "https://www.equilac.com/wp-content/uploads/2022/03/horse-milk-1.jpg",
+    after:
+      "https://images.pexels.com/photos/1996333/pexels-photo-1996333.jpeg?cs=srgb&dl=pexels-helena-lopes-1996333.jpg&fm=jpg"
+  }
 ];

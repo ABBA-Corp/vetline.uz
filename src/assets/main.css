@@ -80,25 +80,6 @@ input[type=number] {
     -webkit-animation: trans alternate-reverse infinite 34s;
 }
 
-.custom-slick .slick-arrow {
-    bottom: -3vw !important;
-    position: absolute;
-    top: auto;
-    transform: scale(2.3);
-    -webkit-transform: scale(2.3);
-    -moz-transform: scale(2.3);
-    -ms-transform: scale(2.3);
-    -o-transform: scale(2.3);
-}
-
-.custom-slick .slick-arrow.slick-next{
-    right: 5vw;
-}
-.custom-slick .slick-arrow.slick-prev{
-    right: 10vw;
-    left: auto;
-
-}
 
 
 .feather2 {
@@ -437,6 +418,27 @@ input[type=number] {
 }
 
 @media(min-width:768px) {
+    .custom-slick .slick-arrow {
+        bottom: -3vw !important;
+        position: absolute;
+        top: auto;
+        transform: scale(2.3);
+        -webkit-transform: scale(2.3);
+        -moz-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        -o-transform: scale(2.3);
+    }
+
+    .custom-slick .slick-arrow.slick-next {
+        right: 5vw;
+    }
+
+    .custom-slick .slick-arrow.slick-prev {
+        right: 10vw;
+        left: auto;
+
+    }
+
     .linear-bg {
         background-image: url(img/bgproduct.png);
         background-size: 100%;

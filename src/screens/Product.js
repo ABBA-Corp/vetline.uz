@@ -141,7 +141,7 @@ function Product() {
               </button>
             </a>
           </div>
-          <div className="flex items-center mt-[5vw]">
+          <div className="md:flex hidden items-center mt-[5vw]">
             <img
               src="https://i.giphy.com/media/deKZM8D0orxwQ18qtB/giphy.webp"
               alt=""
@@ -153,10 +153,10 @@ function Product() {
       </div>
       <div className="p-[7vw]">
         <div className="py-[4vw]">
-          <h1 className="text-[2vw] text-[#fff] font-bold">
+          <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold">
             {language?.results_treatment}
           </h1>
-          <p className="text-[1.2vw] text-[#fff] ">
+          <p className="md:text-[1.2vw] text-[2.3vw] text-[#fff] ">
             {product?.[`description_${currentLang}`]}
           </p>
         </div>
