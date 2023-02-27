@@ -11,6 +11,13 @@
         "after": "Oldin va keyin",
         "cat": "Mushukcha",
         "v_c": "VETLINE KORXONASI",
+        "sps": {
+            "1": "Davolangan tovuqlar soni",
+            "2": "Davolangan itlar soni",
+            "3": "Davolangan mushuklar soni",
+            "4": "Davolangan sigirlar soni"
+        },
+        "addresss":"Toshkent shaxar, \n Uchtepa tumani, 12-uyda",
         "scroll": "Ko'proq ma'lumot uchun scroll qiling",
         "about_p": "'Vet Line' korxona - bu uy hayvonlari va qoramollar salomatligi uchun turli xil mahsulotlar qo'shimchalar, vitaminlar, vaktsinalar va dori-darmonlarn ishlab chiqaruvchi korxona. 'Vet Line' korxonasi mahsulotlari veterinar tavsiyasiga yoki ko'rsatmalariga muvofiq ishlatilishi kerak. Uy hayvonlari egalari mahsulotlarni ishlatishdan oldin veterinar bilan gaplashishlari va ularni hayvonlarning o'ziga xos ehtiyojlariga qarab qanday ishlatishni so'rashlari kerak",
         "top": {
@@ -23,6 +30,7 @@
             "7": "Pastga tushuring"
         },
         "footerlogo": "Hayvonlar uchun yuqori sifatli asl ozuqalar hamda dori-darmonlar",
+        "aboutdesc": "Vet Line Animal Health - bu dunyoda ko'plab mamlakatlarda faoliyat yuritadigan, hayvonlar uchun tibbiy vositalarni ishlab chiqaruvchi va savdo qiluvchi kompaniya. Bu kompaniya hayvonlarni davolash, tibbiy xizmat ko'rsatish, o'simlik mahsulotlari va xilma-xil vositalarni ta'minlashga yo'naltirilgan. Vet Line Animal Health turli hayvon turlari uchun o'z mahsulotlarini ishlab chiqaradi, shular ichida keng qamrovli va kichik hayvonlar, kasalliklarga chora berish, ularni davolash va muntazam xususiyatli hayvonlarni muhofaza qilishda ishlatiladigan dori preparatlari mavjud.",
         "ovideotx": "Bizning Vet Line Animal Health hayvonlar uchun ishlab chiqarilgan barcha mahsulotlarni test qiladi va yuqori sifat natijalarni ta'minlash uchun harakat qiladi. Kompaniya ayni vaqtda xaridorga ishonchli xizmat ko'rsatishni ta'minlash maqsadida ishlab chiqarilgan barcha mahsulotlarga daromadli narxlar bilan ta'minlashga harakat qiladi.",
         "types": {
             "1": "Hayvonlar uchun ozuqalar",
@@ -69,6 +77,14 @@
         "form": "ЗАПОЛНИТЕ ФОРМУ",
         "company": "ПРЕДПРИЯТИЕ ВЕТЛАЙН",
         "video": "Bидео",
+        "sps": {
+            "1": "Количество обработанных цыплят",
+            "2": "Количество пролеченных собак",
+            "3": "Количество пролеченных кошек",
+            "4": "Количество пролеченных коров"
+        },
+        "addresss":"г.Ташкент \n 12 доме Учтепинского района",
+        "aboutdesc": "Vet Line Animal Health — компания, которая производит и продает товары для здоровья животных и работает во многих странах мира. Эта компания специализируется на лечении животных, медицинских услугах, растительных продуктах и ​​различных инструментах. Vet Line Animal Health производит продукты для различных видов животных, включая крупных и мелких животных, для профилактики и лечения заболеваний, а также для повседневной защиты животных.",
         "scroll": "Прокрутите дополнительную информацию",
         "ovideotx": "Наша ветеринарная линия теста на здоровье животных все продукты, производимые для животных, и движения, чтобы обеспечить высокое качество результатов. В настоящее время компания пытается обеспечить прибыльные цены для всех продуктов, производимых для обеспечения надежного обслуживания покупателя.",
         "footerlogo": "Высококачественные оригинальные питательные вещества и лекарства для животных",
@@ -125,12 +141,20 @@
         "5": "Contact",
         "video": "Video",
         "6": "Our company",
+        "sps": {
+            "1": "Number of chickens treated",
+            "2": "Number of treated dogs",
+            "3": "Number of cats treated",
+            "4": "Number of treated cows"
+        },
         "cat": "Kitten",
         "after": "Before and after",
         "form": "FILL THE FORM",
+        "addresss":"Tashkent city \n 12th house, Uchtepa district",
         "footerlogo": "High quality original nutrients and medicines for animals",
         "about_p": "'Vet Li' enterprise is a storage for the production of various products for the production of pets and cattle, food additives, vaccines and medicines. How to adapt Vet Line products to the eye according to the veterinarian's recommendation. Before making pet food products, you should talk to your veterinarian and ask them what kind of things are appropriate for your pet.",
         "results_treatment": "Results of treatment",
+        "aboutdesc": "Vet Line Animal Health is a company that manufactures and markets animal health products with operations in many countries around the world. This company focuses on providing animal treatments, medical services, herbal products and various tools. Vet Line Animal Health manufactures products for a variety of animal species, including large and small animal, disease prevention and treatment, and routine animal protection.",
         "top": {
             "1": "Special cat food",
             "2": "The best quality kitten food available today",

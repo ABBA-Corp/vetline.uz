@@ -296,7 +296,7 @@ function Home() {
               </div>
             </div>
             <div className="w-full relative z-[30] shadow-[0px_0px_10px_rgba(0,0,0,0.7)] bg-[#F8F3EC] p-[2vw] rounded-[1vw] rounded-tl-[0vw]">
-              <div className="relative">
+              <div className="relative md:h-[50vw] overflow-hidden">
                 {tabNames?.map(
                   (item, i) =>
                     tab === i && (

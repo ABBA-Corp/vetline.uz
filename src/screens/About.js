@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import Slider from "react-slick";
 import { getRestApi } from "../components/utils";
 import { useGlobal } from "../redux/selectors";
@@ -8,6 +10,18 @@ function About() {
   useEffect(() => {
     getRestApi("results", setData);
   }, []);
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (e) => {
+    toast.success("Request has been sent");
+    let inComing = `
+    🗣Call me! %0A👤name : ${e.name}, %0A📱phone: ${e.phone}, %0A
+  `;
+    fetch(
+      `https://api.telegram.org/bot6252325299:AAFx-LHCiQ06MUyhCw12JjwfhYEDZbXLWI0/sendMessage?chat_id=-820098065&text=${inComing}`
+    ).then(() => {
+      reset();
+    });
+  };
   const settings = {
     dots: false,
     infinite: true,
@@ -53,7 +67,7 @@ function About() {
               alt=""
               className="w-[4vw] h-[4vw] object-contain invert-[1]"
             />
-            <p className="text-[1.2vw]">{language['scroll']}</p>
+            <p className="text-[1.2vw]">{language["scroll"]}</p>
           </div>
         </div>
         <img
@@ -72,7 +86,7 @@ function About() {
               1000
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Davolangan tovuqlar soni
+              {language?.sps["1"]}
             </p>
           </div>
           <div className="flex flex-col hover-on two">
@@ -83,7 +97,7 @@ function About() {
               95
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Davolangan itlar soni
+              {language?.sps["2"]}
             </p>
           </div>
           <div className="flex flex-col hover-on three">
@@ -94,7 +108,7 @@ function About() {
               304
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Davolangan mushuklar soni
+              {language?.sps["3"]}
             </p>
           </div>
           <div className="flex flex-col hover-on four">
@@ -105,21 +119,13 @@ function About() {
               394
             </h1>
             <p className="md:text-[1vw] text-[3vw] text-[#fff]">
-              Davolangan sigirlar soni
+              {language?.sps["4"]}
             </p>
           </div>
           <div className={`md:block hidden after-bg left-${activeHover}`}></div>
         </div>
         <p className="text-[#fff] md:text-[1.2vw] text-[3.2vw] md:w-[60%] w-[80%] m-auto mt-[5vw] relative z-20">
-          Vet Line Animal Health - bu dunyoda ko'plab mamlakatlarda faoliyat
-          yuritadigan, hayvonlar uchun tibbiy vositalarni ishlab chiqaruvchi va
-          savdo qiluvchi kompaniya. Bu kompaniya hayvonlarni davolash, tibbiy
-          xizmat ko'rsatish, o'simlik mahsulotlari va xilma-xil vositalarni
-          ta'minlashga yo'naltirilgan. Vet Line Animal Health turli hayvon
-          turlari uchun o'z mahsulotlarini ishlab chiqaradi, shular ichida keng
-          qamrovli va kichik hayvonlar, kasalliklarga chora berish, ularni
-          davolash va muntazam xususiyatli hayvonlarni muhofaza qilishda
-          ishlatiladigan dori preparatlari mavjud.
+          {language["aboutdesc"]}
         </p>
       </div>
       <div className="bg-[#E94B4B] py-[5vw]">
@@ -168,7 +174,7 @@ function About() {
           {language["ovideotx"]}
         </p>
       </div>
-      <div
+      <form onSubmit={handleSubmit(onSubmit)}
         className="bg-[#E94B4B] p-[5vw] md:pl-0 flex items-center gap-[5vw]"
         id="contact"
       >
@@ -184,12 +190,16 @@ function About() {
           <input
             type="text"
             placeholder={language["name"]}
+            {...register("name")}
+
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
           />
           <input
             type="text"
             placeholder={language["phone"]}
             className="bg-[#F9F9F9] outline-[#E94A4A] rounded-[.4vw] md:p-[1vw] p-[2vw]  md:px-[2vw] px-[4vw] md:text-[1vw] text-[2.6vw]"
+            {...register("phone")}
+
             maxLength={12}
             onInput={(e) =>
               (e.target.value = e.target.value
@@ -206,13 +216,13 @@ function About() {
               href="https://www.google.com/maps/place/Amir+Temur+Square/@41.311139,69.279593,75358m/data=!3m1!1e3!4m5!3m4!1s0x0:0x81095e06b654b845!8m2!3d41.3111391!4d69.2795927?hl=en"
               className="w-full"
             >
-              <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#F9F9F9] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#000] w-full hover:text-[#fff] hover:bg-[#000] transition">
+              <button className="md:p-[.4vw]  p-[1.4vw] px-[1.2vw] bg-[#F9F9F9] md:rounded-[.4vw] rounded-[1vw] md:text-[1.3vw] text-[3.3vw] text-[#000] w-full hover:text-[#fff] hover:bg-[#000] transition" type="button">
                 {language["address"]}
               </button>
             </a>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

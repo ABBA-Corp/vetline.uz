@@ -104,17 +104,17 @@ function Footer() {
               >
                 info@neolit.uz
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] "
               >
                 Toshkent shahar
-              </a>
+              </a> */}
               <a
                 href="#"
-                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
+                className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] md:w-[70%]"
               >
-                Uchtepa tumani 12-uy
+                {language['addresss']}
               </a>
             </div>
           </div>
