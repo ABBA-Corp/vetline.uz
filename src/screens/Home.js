@@ -84,7 +84,7 @@ function Home() {
                             </button>
                             <div className="flex flex-col">
                               <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
-                                Mushukcha
+                                {language.cat}
                               </h1>
                               <p className="font-medium text-[#fff] text-[.8vw]">
                                 {language.top1}
@@ -103,7 +103,7 @@ function Home() {
                           <div className="flex gap-[1.4vw] relative p-[.4vw] items-start justify-between">
                             <div className="flex flex-col pl-[2vw]">
                               <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
-                                Mushukcha
+                                {language.cat}
                               </h1>
                               <img
                                 src={require("../assets/img/multicat.png")}
@@ -185,13 +185,19 @@ function Home() {
                       window.innerWidth > 768 && `url(${item?.photo})`
                   }}
                 >
-                  <img src={item?.photo} className="w-[30vw] h-[25vw] object-cover rounded-[2vw]  md:hidden block" alt="" />
+                  <img
+                    src={item?.photo}
+                    className="max-w-[30vw] w-full h-[25vw] object-cover rounded-[2vw]  md:hidden block"
+                    alt=""
+                  />
                   <div className="w-full md:bg-[#00000065] h-full absolute top-0 left-0 to-top transition-[.3s] "></div>
                   <div className="md:static flex flex-col gap-[2vw] items-start">
                     <p className="md:text-[#fff] z-[20] md:text-[2vw] text-[5vw] md:text-center md:font-normal font-semibold">
                       {item[`title_${currentLang}`]}
                     </p>
-                    <button className="bg-[#E94A4A] p-[1vw] px-[5vw] text-[#fff] rounded-[2vw] md:hidden block">{language.top["6"]}</button>
+                    <button className="bg-[#E94A4A] p-[1vw] px-[5vw] text-[#fff] rounded-[2vw] md:hidden block">
+                      {language.top["6"]}
+                    </button>
                   </div>
                 </Link>
               ))}

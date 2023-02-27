@@ -21,7 +21,7 @@ function Footer() {
                 <HeaderLogo />
               </div> */}
               <p className="md:text-[1vw] text-[3vw] md:text-[#000] text-[#fff]">
-                Hayvonlar uchun yuqori sifatli asl ozuqalar hamda dori-darmonla
+                {language['footerlogo']}
               </p>
             </div>
             <iframe

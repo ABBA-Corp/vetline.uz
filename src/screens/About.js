@@ -30,36 +30,30 @@ function About() {
       <header className="md:h-screen bg-[#EBEBEB] md:pt-[8vw] pt-[30vw] px-[5vw] relative md:pb-0 pb-[8vw]">
         <div className="relative z-[30] md:w-[50vw] w-[70vw] pl-[10vw]">
           <h1 className="md:text-[2vw] text-[5vw] text-[#E94B4B] my-[4vw] uppercase font-bold">
-            Vetline Korxonasi
+            {language["company"]}
           </h1>
           <p className="text-black mt-[5vw] md:text-[1.2vw] text-[3.2vw]">
-            "Vet Line" korxona - bu uy hayvonlari va qoramollar salomatligi
-            uchun turli xil mahsulotlar qo'shimchalar, vitaminlar, vaktsinalar
-            va dori-darmonlarn ishlab chiqaruvchi korxona. "Vet Line" korxonasi
-            mahsulotlari veterinar tavsiyasiga yoki ko'rsatmalariga muvofiq
-            ishlatilishi kerak. Uy hayvonlari egalari mahsulotlarni ishlatishdan
-            oldin veterinar bilan gaplashishlari va ularni hayvonlarning o'ziga
-            xos ehtiyojlariga qarab qanday ishlatishni so'rashlari kerak
+            {language["about_p"]}
           </p>
           <div className="flex gap-[2vw] mt-[2vw]">
             <a href="https://youtu.be/ZvWbYsqNUpQ" target="_blank">
               <button className=" md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-[#EA5252] text-[#fff] hover:bg-[#db1616] transition">
-                Video
+                {language["video"]}
               </button>
             </a>
             <a href="#contact">
               <button className="border-black border md:px-[3.6vw] px-[6.6vw] md:py-[.5vw] py-[1.5vw] rounded-[7vw] md:text-[1vw] text-[3.5vw] relative z-20 bg-transparent hover:bg-[#000] hover:text-[#fff] transition">
-                Aloqa
+                {language["5"]}
               </button>
             </a>
           </div>
-          <div className="md:flex hidden items-center mt-[8vw]">
+          <div className="md:flex hidden items-center absolute bottom-[-8vw]">
             <img
               src="https://i.giphy.com/media/deKZM8D0orxwQ18qtB/giphy.webp"
               alt=""
               className="w-[4vw] h-[4vw] object-contain invert-[1]"
             />
-            <p className="text-[1.2vw]">Ko'proq ma'lumot uchun scroll qiling</p>
+            <p className="text-[1.2vw]">{language['scroll']}</p>
           </div>
         </div>
         <img
@@ -130,7 +124,7 @@ function About() {
       </div>
       <div className="bg-[#E94B4B] py-[5vw]">
         <h1 className="text-[#fff] font-bold md:text-[2.4vw] text-[4.4vw] text-center">
-          Davolanish natijalari
+          {language["results_treatment"]}
         </h1>
         <div className="py-[4vw] pl-[6vw]">
           <Slider {...settings}>
@@ -158,7 +152,7 @@ function About() {
       </div>
       <div className="bg-[#EA5252] p-[5vw]">
         <h1 className="text-[#fff] font-bold md:text-[2.4vw] text-[4.4vw] text-center">
-          Korxonamiz haqida video
+          {language["ovideo"]}
         </h1>
         <div className="bg-phone md:p-[1vw] p-[2vw] bg-cover md:w-[45vw] md:h-[22vw] w-[85vw] h-[42vw] m-auto mt-[3vw]">
           <iframe
@@ -171,12 +165,7 @@ function About() {
           />
         </div>
         <p className="text-[#fff] md:text-[1.2vw] text-[3.2vw] mt-[2vw] md:w-[80%] w-[90%] m-auto ">
-          Bizning Vet Line Animal Health hayvonlar uchun ishlab chiqarilgan
-          barcha mahsulotlarni test qiladi va yuqori sifat natijalarni
-          ta'minlash uchun harakat qiladi. Kompaniya ayni vaqtda xaridorga
-          ishonchli xizmat ko'rsatishni ta'minlash maqsadida ishlab chiqarilgan
-          barcha mahsulotlarga daromadli narxlar bilan ta'minlashga harakat
-          qiladi.
+          {language["ovideotx"]}
         </p>
       </div>
       <div

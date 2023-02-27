@@ -5,8 +5,14 @@
         "3": "Foydali ma’lumotlar",
         "4": "Foydalanish shartlari",
         "5": "Aloqa",
+        "video": "Video",
+        "company": "VETLINE KORXONASI",
         "6": "Kompaniyamiz",
         "after": "Oldin va keyin",
+        "cat": "Mushukcha",
+        "v_c": "VETLINE KORXONASI",
+        "scroll": "Ko'proq ma'lumot uchun scroll qiling",
+        "about_p": "'Vet Line' korxona - bu uy hayvonlari va qoramollar salomatligi uchun turli xil mahsulotlar qo'shimchalar, vitaminlar, vaktsinalar va dori-darmonlarn ishlab chiqaruvchi korxona. 'Vet Line' korxonasi mahsulotlari veterinar tavsiyasiga yoki ko'rsatmalariga muvofiq ishlatilishi kerak. Uy hayvonlari egalari mahsulotlarni ishlatishdan oldin veterinar bilan gaplashishlari va ularni hayvonlarning o'ziga xos ehtiyojlariga qarab qanday ishlatishni so'rashlari kerak",
         "top": {
             "1": "Mushuklar maxsus ovqati",
             "2": "Hozirgi kundagi eng sifatli mushukchalar ozuqasi",
@@ -16,6 +22,8 @@
             "6": "Batafsil",
             "7": "Pastga tushuring"
         },
+        "footerlogo": "Hayvonlar uchun yuqori sifatli asl ozuqalar hamda dori-darmonlar",
+        "ovideotx": "Bizning Vet Line Animal Health hayvonlar uchun ishlab chiqarilgan barcha mahsulotlarni test qiladi va yuqori sifat natijalarni ta'minlash uchun harakat qiladi. Kompaniya ayni vaqtda xaridorga ishonchli xizmat ko'rsatishni ta'minlash maqsadida ishlab chiqarilgan barcha mahsulotlarga daromadli narxlar bilan ta'minlashga harakat qiladi.",
         "types": {
             "1": "Hayvonlar uchun ozuqalar",
             "2": "Hayvonlar uchun vitaminlar",
@@ -46,7 +54,8 @@
         "writetelegram": "Telegramdan yozish",
         "form": "FORMANI TO'LDIRING",
         "top1": "'Wetline' xohlayman, qachon olib berasiz?",
-        "results_treatment": "Davolanish natijalari"
+        "results_treatment": "Davolanish natijalari",
+        "ovideo": "Korxonamiz haqida video"
     },
     "ru": {
         "1": "Продукты",
@@ -56,7 +65,15 @@
         "5": "Связь",
         "6": "Наша компания",
         "after": "До и после",
+        "v_c": "VETLINE KORXONASI",
         "form": "ЗАПОЛНИТЕ ФОРМУ",
+        "company": "ПРЕДПРИЯТИЕ ВЕТЛАЙН",
+        "video": "Bидео",
+        "scroll": "Прокрутите дополнительную информацию",
+        "ovideotx": "Наша ветеринарная линия теста на здоровье животных все продукты, производимые для животных, и движения, чтобы обеспечить высокое качество результатов. В настоящее время компания пытается обеспечить прибыльные цены для всех продуктов, производимых для обеспечения надежного обслуживания покупателя.",
+        "footerlogo": "Высококачественные оригинальные питательные вещества и лекарства для животных",
+        "about_p": "Предприятие «Вет Ли» представляет собой склад по производству различной продукции для производства домашних животных и крупного рогатого скота, пищевых добавок, вакцин и лекарственных средств. Как адаптировать продукты Vet Line к глазу в соответствии с рекомендациями ветеринара. Прежде чем делать продукты для домашних животных, вы должны поговорить со своим ветеринаром и спросить его, какие продукты подходят для вашего питомца.",
+        "cat": "Котенок",
         "results_treatment": "Результаты лечения",
         "que": "Нажмите на эту кнопку, чтобы отправить вопросы и предложения в нашу компанию, заказать продукцию, начать сотрудничество",
         "top": {
@@ -73,6 +90,7 @@
             "2": "Витамины для животных",
             "3": "Ветеринарные препараты"
         },
+        "ovideo": "Видео о нашей компании",
         "tops": "Лучшие товары",
         "more": "Подробнее о компании",
         "abouttitle": "Ветеринарическая компания “Vetline”",
@@ -102,10 +120,16 @@
         "2": "About us",
         "3": "Useful information",
         "4": "Terms of use",
+        "company": "VETLINE ENTERPRISE",
+        "scroll": "Make scroll for more information",
         "5": "Contact",
+        "video": "Video",
         "6": "Our company",
+        "cat": "Kitten",
         "after": "Before and after",
         "form": "FILL THE FORM",
+        "footerlogo": "High quality original nutrients and medicines for animals",
+        "about_p": "'Vet Li' enterprise is a storage for the production of various products for the production of pets and cattle, food additives, vaccines and medicines. How to adapt Vet Line products to the eye according to the veterinarian's recommendation. Before making pet food products, you should talk to your veterinarian and ask them what kind of things are appropriate for your pet.",
         "results_treatment": "Results of treatment",
         "top": {
             "1": "Special cat food",
@@ -123,6 +147,8 @@
         },
         "tops": "Top products",
         "more": "More about the company",
+        "ovideo": "Video about our company",
+        "ovideotx": "Our VET Line Animal Health tests all products manufactured for animals and moves to ensure high quality results. The company is currently trying to provide profitable prices to all products manufactured to ensure reliable service to the buyer.",
         "abouttitle": "Veterinary company “Vetline”",
         "writetelegram": "Write from Telegram",
         "abouttext": "The veterinary company 'Vetline' provides you with new and high-quality assortments in veterinary products and not only. In the field of Feed and vitamins, it is also a leader in this industry. The company Vetline was manufactured in 2012. The veterinary company 'Vetline' provides you new and high-quality ranges in veterinary products and not only. In the field of Feed and vitamins, it is also a leader in this industry. Vetline was manufactured in 2012.",
