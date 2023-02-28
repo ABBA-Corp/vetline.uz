@@ -296,7 +296,7 @@ function Home() {
               </div>
             </div>
             <div className="w-full relative z-[30] shadow-[0px_0px_10px_rgba(0,0,0,0.7)] bg-[#F8F3EC] p-[2vw] rounded-[1vw] rounded-tl-[0vw]">
-              <div className="relative md:h-[50vw] overflow-hidden">
+              <div className="relative md:h-[50vw] md:min-h-[50vw] min-h-[70vw] overflow-hidden">
                 {tabNames?.map(
                   (item, i) =>
                     tab === i && (
@@ -360,7 +360,7 @@ function Home() {
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
                         {language["feedback"]["6"]}
                       </h1>
-                      <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
+                      <button className="bg-[#E94A4A] whitespace-nowrap w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
                         90 {language["day"]}
                       </button>
                     </div>
@@ -368,7 +368,7 @@ function Home() {
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
                         {language["feedback"]["7"]}
                       </h1>
-                      <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
+                      <button className="bg-[#E94A4A] whitespace-nowrap w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
                         40 {language["day"]}
                       </button>
                     </div>
