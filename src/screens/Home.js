@@ -336,7 +336,7 @@ function Home() {
               </div>
               <div className="bg-white w-full mt-[2vw] rounded-[1vw] p-[2vw] px-[4vw]">
                 <h1 className="font-bold text-[2vw] uppercase mb-[2vw] md:block hidden">
-                  Neovit otlar uchun maxsus
+                  {language["special"]}
                 </h1>
                 <div className="flex items-center gap-[4vw] justify-between ">
                   <div className="grid gap-[3vw] md:grid-cols-2 gap-x-[6vw] md:w-auto w-full">
@@ -361,7 +361,7 @@ function Home() {
                         {language["feedback"]["6"]}
                       </h1>
                       <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        90 kun
+                        90 {language["day"]}
                       </button>
                     </div>
                     <div className="flex items-center gap-[2vw]">
@@ -369,7 +369,7 @@ function Home() {
                         {language["feedback"]["7"]}
                       </h1>
                       <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        40 kun
+                        40 {language["day"]}
                       </button>
                     </div>
                   </div>
@@ -387,19 +387,19 @@ function Home() {
               <div className="flex md:flex-col hover:opacity-[.7] cursor-pointer transition items-center md:w-[20%] text-center md:gap-[2vw] gap-[4vw]">
                 <BargSvg />
                 <h1 className="text-[#E94A4A] md:text-[1.7vw] text-[3.7vw] font-bold">
-                  Mahsulotlarimiz 100% organik{" "}
+                  {language?.features?.["1"]}
                 </h1>
               </div>
               <div className="flex md:flex-col hover:opacity-[.7] cursor-pointer transition items-center md:w-[20%] text-center md:gap-[2vw] gap-[4vw]">
                 <MedSvg />
                 <h1 className="text-[#E94A4A] md:text-[1.7vw] text-[3.7vw] font-bold">
-                  Vitaminlarga boy
+                  {language?.features?.["2"]}
                 </h1>
               </div>
               <div className="flex md:flex-col hover:opacity-[.7] cursor-pointer transition items-center md:w-[20%] text-center md:gap-[2vw] gap-[4vw]">
                 <HeartSvg />
                 <h1 className="text-[#E94A4A] md:text-[1.7vw] text-[3.7vw] font-bold">
-                  Sog’lomlikni ta’minlaydi
+                  {language?.features?.["3"]}
                 </h1>
               </div>
             </div>

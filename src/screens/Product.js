@@ -133,11 +133,11 @@ function Product() {
               className="md:p-[.4vw] p-[1.4vw] px-[1.5vw] min-w-[11vw] bg-[#ffffff] rounded-[6vw] md:text-[1.3vw] text-[3.3vw] md:w-auto w-full text-[#000] hover:bg-[#000] hover:text-[#fff] transition"
               onClick={() => setPurchase(true)}
             >
-              Sotib olish
+              {language['top']['5']}
             </button>
             <a href="tel:+998995595353" className="md:w-auto w-full">
               <button className="md:p-[.4vw] p-[1.4vw] px-[1.5vw] min-w-[11vw] bg-[#E94B4B] hover:bg-[#e60d0d] rounded-[6vw] md:text-[1.3vw] text-[3.3vw] md:w-auto w-full text-[#fff] md:border-none border border-white  transition">
-                Aloqa
+              {language['5']}
               </button>
             </a>
           </div>
@@ -147,7 +147,7 @@ function Product() {
               alt=""
               className="w-[4vw] h-[4vw] object-contain invert-[1]"
             />
-            <p className="text-[1.2vw]">Ko'proq ma'lumot uchun scroll qiling</p>
+            <p className="text-[1.2vw] whitespace-nowrap">{language['scroll']}</p>
           </div>
         </div>
       </div>

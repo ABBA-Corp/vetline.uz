@@ -6,26 +6,40 @@
         "4": "Foydalanish shartlari",
         "5": "Aloqa",
         "video": "Video",
+        "special": "NEOVIT OTLAR UCHUN MAXSUS",
         "company": "VETLINE KORXONASI",
         "6": "Kompaniyamiz",
         "after": "Oldin va keyin",
         "cat": "Mushukcha",
         "v_c": "VETLINE KORXONASI",
+        "features": {
+            "1": "Mahsulotlarimiz 100% organik",
+            "2": "Vitaminlarga boy",
+            "3": "Sog’lomlikni ta’minlaydi"
+        },
         "sps": {
             "1": "Davolangan tovuqlar soni",
             "2": "Davolangan itlar soni",
             "3": "Davolangan mushuklar soni",
             "4": "Davolangan sigirlar soni"
         },
-        "addresss":"Toshkent shaxar, \n Uchtepa tumani, 12-uyda",
+        "day": "kun",
+        "addresss": "Toshkent shaxar, \n Uchtepa tumani, 12-uyda",
         "scroll": "Ko'proq ma'lumot uchun scroll qiling",
         "about_p": "'Vet Line' korxona - bu uy hayvonlari va qoramollar salomatligi uchun turli xil mahsulotlar qo'shimchalar, vitaminlar, vaktsinalar va dori-darmonlarn ishlab chiqaruvchi korxona. 'Vet Line' korxonasi mahsulotlari veterinar tavsiyasiga yoki ko'rsatmalariga muvofiq ishlatilishi kerak. Uy hayvonlari egalari mahsulotlarni ishlatishdan oldin veterinar bilan gaplashishlari va ularni hayvonlarning o'ziga xos ehtiyojlariga qarab qanday ishlatishni so'rashlari kerak",
+        "terms": {
+            "1": "Vet Line Animal Health - uy hayvonlari va chorva mollari uchun qo'shimchalar, vitaminlar va dori-darmonlar kabi turli xil hayvonlar salomatligi mahsulotlarini taklif qiluvchi brend. Ushbu mahsulotlardan foydalanish hayvonning o'ziga xos ehtiyojlariga va veterinar tavsiyasiga qarab farq qilishi mumkin.            ",
+            "2": "Vet Line Animal Health mahsulotlaridan foydalanish bo'yicha ba'zi umumiy ko'rsatmalar: Hayvoningizga biron bir mahsulotni ishlatishdan oldin veterinar bilan maslahatlashing, chunki ular hayvonning sog'lig'i va shaxsiy ehtiyojlariga qarab aniq tavsiyalar berishi mumkin.  ",
+            "3": "Mahsulot yorlig'ida yoki veterinar ko'rsatmasida tavsiya etilgan dozalash va qo'llash bo'yicha ko'rsatmalarga rioya qiling. Barcha mahsulotlarni salqin, quruq, bolalar va hayvonlar qo'li etmaydigan joyda saqlang.",
+            "4": "Agar mahsulotdan foydalangandan so'ng hayvoningiz biron bir nojo'ya ta'sirga duch kelsa, darhol foydalanishni to'xtating va veterinaringizga murojaat qiling.  Odamlar yoki boshqa hayvonlar uchun Vet Line Animal Health mahsulotidan foydalanmang.",
+            "5": "Umuman olganda, hayvoningizning salomatligi va farovonligini ta'minlash uchun Vet Line Animal Health mahsulotlaridan mas'uliyat bilan va professional tavsiyalarga muvofiq foydalanish muhimdir."
+        },
         "top": {
             "1": "Mushuklar maxsus ovqati",
             "2": "Hozirgi kundagi eng sifatli mushukchalar ozuqasi",
             "3": " 100% tabiiy va to'yimli",
             "4": "Uy hayvonlaringiz taomnomasidan zavqlanishi ta'minlaymiz!",
-            "5": "Xarid",
+            "5": "Sotib olish",
             "6": "Batafsil",
             "7": "Pastga tushuring"
         },
@@ -69,26 +83,40 @@
         "1": "Продукты",
         "2": "О нас",
         "3": "Полезная информация",
-        "4": "Условия использования",
+        "4": "Условия эксплуатации",
         "5": "Связь",
         "6": "Наша компания",
         "after": "До и после",
         "v_c": "VETLINE KORXONASI",
+        "special": "СПЕЦИАЛЬНО ДЛЯ ЛОШАДЕЙ НЕОВИТ ",
         "form": "ЗАПОЛНИТЕ ФОРМУ",
         "company": "ПРЕДПРИЯТИЕ ВЕТЛАЙН",
         "video": "Bидео",
+        "terms": {
+            "1": "Vet Line Animal Health — это торговая марка, которая предлагает различные продукты для здоровья животных, включая добавки, витамины и лекарства для домашних животных и домашнего скота. Использование этих продуктов может варьироваться в зависимости от индивидуальных потребностей животного и рекомендаций. ветеринарного врача.может.",
+            "2": "Некоторые общие рекомендации по использованию продуктов Vet Line Animal Health: проконсультируйтесь с ветеринаром перед использованием любого продукта для вашего животного, так как он может дать конкретные рекомендации, основанные на состоянии здоровья животного и его индивидуальных потребностях",
+            "3": "Следуйте рекомендуемым дозировкам и инструкциям по применению на этикетке продукта или инструкциям ветеринара. Храните все продукты в прохладном, сухом месте, недоступном для детей и животных.",
+            "4": "Если у вашего животного возникнут какие-либо побочные реакции после использования продукта, немедленно прекратите использование и проконсультируйтесь с ветеринаром. Не используйте продукты Vet Line Animal Health для людей или других животных.",
+            "5": "В целом важно использовать продукты Vet Line Animal Health ответственно и в соответствии с профессиональными советами, чтобы обеспечить здоровье и благополучие вашего животного"
+        },
         "sps": {
             "1": "Количество обработанных цыплят",
             "2": "Количество пролеченных собак",
             "3": "Количество пролеченных кошек",
             "4": "Количество пролеченных коров"
         },
-        "addresss":"г.Ташкент \n 12 доме Учтепинского района",
+        "features": {
+            "1": "Наша продукция на 100% органическая",
+            "2": "Богат витаминами",
+            "3": "Обеспечивает здоровье"
+        },
+        "day": "ден",
+        "addresss": "г.Ташкент \n 12 доме Учтепинского района",
         "aboutdesc": "Vet Line Animal Health — компания, которая производит и продает товары для здоровья животных и работает во многих странах мира. Эта компания специализируется на лечении животных, медицинских услугах, растительных продуктах и ​​различных инструментах. Vet Line Animal Health производит продукты для различных видов животных, включая крупных и мелких животных, для профилактики и лечения заболеваний, а также для повседневной защиты животных.",
         "scroll": "Прокрутите дополнительную информацию",
         "ovideotx": "Наша ветеринарная линия теста на здоровье животных все продукты, производимые для животных, и движения, чтобы обеспечить высокое качество результатов. В настоящее время компания пытается обеспечить прибыльные цены для всех продуктов, производимых для обеспечения надежного обслуживания покупателя.",
         "footerlogo": "Высококачественные оригинальные питательные вещества и лекарства для животных",
-        "about_p": "Предприятие «Вет Ли» представляет собой склад по производству различной продукции для производства домашних животных и крупного рогатого скота, пищевых добавок, вакцин и лекарственных средств. Как адаптировать продукты Vet Line к глазу в соответствии с рекомендациями ветеринара. Прежде чем делать продукты для домашних животных, вы должны поговорить со своим ветеринаром и спросить его, какие продукты подходят для вашего питомца.",
+        "about_p": "Предприятие 'Вет Ли' представляет собой склад по производству различной продукции для производства домашних животных и крупного рогатого скота, пищевых добавок, вакцин и лекарственных средств. Как адаптировать продукты Vet Line к глазу в соответствии с рекомендациями ветеринара. Прежде чем делать продукты для домашних животных, вы должны поговорить со своим ветеринаром и спросить его, какие продукты подходят для вашего питомца.",
         "cat": "Котенок",
         "results_treatment": "Результаты лечения",
         "que": "Нажмите на эту кнопку, чтобы отправить вопросы и предложения в нашу компанию, заказать продукцию, начать сотрудничество",
@@ -97,7 +125,7 @@
             "2": "Самый качественный корм для котят на сегодняшний день",
             "3": "100% натуральный и питательный",
             "4": "Мы позаботимся о том, чтобы вашим питомцам понравилось меню!",
-            "5": "Хочу купить",
+            "5": "Kупить",
             "6": "Еще",
             "7": "Спуститесь вниз"
         },
@@ -141,16 +169,30 @@
         "5": "Contact",
         "video": "Video",
         "6": "Our company",
+        "terms": {
+            "1": "Vet Line Animal Health is a brand that offers a variety of animal health products, including supplements, vitamins and medications for pets and livestock. The use of these products may vary based on the individual needs of the animal and the recommendation of the veterinarian. can.",
+            "2": "Some general guidelines for using Vet Line Animal Health products: Consult your veterinarian before using any product on your animal, as they can make specific recommendations based on the animal's health and individual needs.",
+            "3": "Follow recommended dosage and administration instructions on product label or veterinarian's instructions. Store all products in a cool, dry place, out of reach of children and animals.",
+            "4": "If your animal experiences any adverse reactions after using the product, discontinue use immediately and consult your veterinarian. Do not use Vet Line Animal Health products on humans or other animals.",
+            "5": "In general, it is important to use Vet Line Animal Health products responsibly and according to professional advice to ensure the health and well-being of your animal."
+        },
         "sps": {
             "1": "Number of chickens treated",
             "2": "Number of treated dogs",
             "3": "Number of cats treated",
             "4": "Number of treated cows"
         },
+        "features": {
+            "1": "Our products are 100% organic",
+            "2": "Rich in vitamins",
+            "3": "Provides health"
+        },
+        "special": "SPECIAL FOR NEOVIT HORSES",
         "cat": "Kitten",
+        "day": "day",
         "after": "Before and after",
         "form": "FILL THE FORM",
-        "addresss":"Tashkent city \n 12th house, Uchtepa district",
+        "addresss": "Tashkent city \n 12th house, Uchtepa district",
         "footerlogo": "High quality original nutrients and medicines for animals",
         "about_p": "'Vet Li' enterprise is a storage for the production of various products for the production of pets and cattle, food additives, vaccines and medicines. How to adapt Vet Line products to the eye according to the veterinarian's recommendation. Before making pet food products, you should talk to your veterinarian and ask them what kind of things are appropriate for your pet.",
         "results_treatment": "Results of treatment",
