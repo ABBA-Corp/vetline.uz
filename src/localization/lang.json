@@ -11,6 +11,7 @@
         "6": "Kompaniyamiz",
         "after": "Oldin va keyin",
         "cat": "Mushukcha",
+        "cat1": "Kuchukcha",
         "v_c": "VETLINE KORXONASI",
         "features": {
             "1": "Mahsulotlarimiz 100% organik",
@@ -75,7 +76,7 @@
         "typeproduct": "Maxsulot turi",
         "writetelegram": "Telegramdan yozish",
         "form": "FORMANI TO'LDIRING",
-        "top1": "'Wetline' xohlayman, qachon olib berasiz?",
+        "top1": "'Vetline' xoxlayman, qachon olib berasiz?",
         "results_treatment": "Davolanish natijalari",
         "ovideo": "Korxonamiz haqida video"
     },
@@ -118,6 +119,7 @@
         "footerlogo": "Высококачественные оригинальные питательные вещества и лекарства для животных",
         "about_p": "Предприятие 'Вет Ли' представляет собой склад по производству различной продукции для производства домашних животных и крупного рогатого скота, пищевых добавок, вакцин и лекарственных средств. Как адаптировать продукты Vet Line к глазу в соответствии с рекомендациями ветеринара. Прежде чем делать продукты для домашних животных, вы должны поговорить со своим ветеринаром и спросить его, какие продукты подходят для вашего питомца.",
         "cat": "Котенок",
+        "cat1": "Щенок",
         "results_treatment": "Результаты лечения",
         "que": "Нажмите на эту кнопку, чтобы отправить вопросы и предложения в нашу компанию, заказать продукцию, начать сотрудничество",
         "top": {
@@ -189,6 +191,7 @@
         },
         "special": "SPECIAL FOR NEOVIT HORSES",
         "cat": "Kitten",
+        "cat1": "Puppy",
         "day": "day",
         "after": "Before and after",
         "form": "FILL THE FORM",
@@ -235,7 +238,7 @@
             "6": "How many days will be treated",
             "7": "How many days will it take effect"
         },
-        "top1": "I want 'Wetline', when will you deliver?",
+        "top1": "I want 'Vetline', when will you deliver?",
         "que": "Click this button to send your questions and suggestions to our company, to order products, to start cooperation"
     }
 }

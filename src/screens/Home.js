@@ -103,10 +103,10 @@ function Home() {
                           <div className="flex gap-[1.4vw] relative p-[.4vw] items-start justify-between">
                             <div className="flex flex-col pl-[2vw]">
                               <h1 className="font-medium text-[#fff] text-[1.2vw] mt-[.5vw]">
-                                {language.cat}
+                                {language.cat1}
                               </h1>
                               <img
-                                src={require("../assets/img/multicat.png")}
+                                src={require("../assets/img/multicat2.png")}
                                 className="w-[4vw] absolute top-[-2vw] left-[-2vw]"
                                 alt=""
                               />

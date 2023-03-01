@@ -129,7 +129,8 @@ function Navbar() {
               <NavLink to="/terms">{language["4"]}</NavLink>
             </li>
             <select
-              onChange={changeLanguage}
+                defaultValue={localStorage["lang"]}
+                onChange={changeLanguage}
               className="text-[#fff]  bg-transparent outline-none"
             >
               <option value="uz">Uz</option>
