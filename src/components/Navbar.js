@@ -84,7 +84,7 @@ function Navbar() {
             </button>
           </li>
           <li className="md:w-[8vw] text-center">
-            <a href="tel:+998995595353">
+            <a href="tel:+998905997273">
               <button className="flex items-center gap-[.4vw] bg-[#ffffff46] p-[.4vw] px-[1vw] rounded-[.3vw] text-[1vw] text-[#fff] border border-transparent hover:bg-transparent hover:border-white transition">
                 <ContactMan />
                 {language["5"]}
@@ -105,7 +105,7 @@ function Navbar() {
             alt=""
           /> */}
           <HeaderLogo />
-          <a href="tel:+998995595353">
+          <a href="tel:+998905997273">
             <button className="text-[6vw] bg-[#F9F2EB] w-[10vw] h-[10vw] rounded-[50%] text-[#E94B4B] flex items-center justify-center">
               <PhoneNav />
             </button>

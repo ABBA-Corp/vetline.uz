@@ -84,13 +84,13 @@ function Footer() {
                 href="#"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
-                +998995595353
+                +998905997273
               </a>
               <a
                 href="#"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
-                +998946776769
+                +998973427271
               </a>
               <a
                 href="#"
@@ -102,7 +102,7 @@ function Footer() {
                 href="#"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
-                info@neolit.uz
+                fat.vet_87@mail.ru
               </a>
               {/* <a
                 href="#"

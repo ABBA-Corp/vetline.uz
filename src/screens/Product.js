@@ -135,7 +135,7 @@ function Product() {
             >
               {language['top']['5']}
             </button>
-            <a href="tel:+998995595353" className="md:w-auto w-full">
+            <a href="tel:+998905997273" className="md:w-auto w-full">
               <button className="md:p-[.4vw] p-[1.4vw] px-[1.5vw] min-w-[11vw] bg-[#E94B4B] hover:bg-[#e60d0d] rounded-[6vw] md:text-[1.3vw] text-[3.3vw] md:w-auto w-full text-[#fff] md:border-none border border-white  transition">
               {language['5']}
               </button>
