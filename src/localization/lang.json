@@ -76,7 +76,8 @@
         "typeproduct": "Maxsulot turi",
         "writetelegram": "Telegramdan yozish",
         "form": "FORMANI TO'LDIRING",
-        "top1": "'Vetline' xoxlayman, qachon olib berasiz?",
+        "top1": "'Vetline' xolayman, qachon olib berasiz?",
+        "top2": "I want to eat Vetline",
         "results_treatment": "Davolanish natijalari",
         "ovideo": "Korxonamiz haqida video"
     },
@@ -159,7 +160,8 @@
             "7": "Сколько дней вступит в силу"
         },
         "typeproduct": "Тип продукт",
-        "top1": "Хочу 'Ветлайн', когда доставите?"
+        "top1": "Хочу 'Ветлайн', когда доставите?",
+        "top2": "Я хочу съесть Ветлайн"
     },
     "en": {
         "1": "Our Products",
@@ -239,6 +241,7 @@
             "7": "How many days will it take effect"
         },
         "top1": "I want 'Vetline', when will you deliver?",
+        "top2": "I want to eat Vetline",
         "que": "Click this button to send your questions and suggestions to our company, to order products, to start cooperation"
     }
 }

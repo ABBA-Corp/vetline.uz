@@ -33,9 +33,9 @@ function Footer() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div className="flex md:gap-[10vw] gap-[4vw] justify-center md:items-center md:flex-row flex-col">
+          <div className="flex md:gap-[10vw] gap-[4vw] justify-center md:items-center md:flex-row flex-col md:min-w-[50%]">
             <div className="flex flex-col gap-[.6vw]">
-              <h1 className="font-bold md:text-[1.7vw] text-[3.7vw] uppercase md:text-black text-[#fff]">
+              <h1 className="font-bold md:text-[1.7vw] text-[3.7vw] uppercase md:text-black text-[#fff] whitespace-nowrap">
                 {language["6"]}
               </h1>
               <a

@@ -111,7 +111,7 @@ function Home() {
                                 alt=""
                               />
                               <p className="font-medium text-[#fff] text-[.8vw]">
-                                {language.top1}
+                                {language.top2}
                               </p>
                             </div>
                             <button
