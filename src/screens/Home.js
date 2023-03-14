@@ -133,7 +133,7 @@ function Home() {
                     alt=""
                   />
                   <div className="bg-[#F0D7B3] bg-slide flex justify-center items-end p-[5vw] md:h-[100vh] h-[220vw]">
-                    <div className="bg-[#E94A4A] p-[1vw] md:pt-[1vw] pt-[6vw] px-[4vw] md:w-[70%] w-[100%] items-center md:rounded-[2vw] rounded-[5vw] relative z-20 flex justify-between md:flex-row flex-col-reverse md:h-auto h-[80vw]">
+                    <div className="bg-[#E94A4A] p-[1vw] md:pt-[1vw] pt-[6vw] px-[4vw] md:w-[70%] w-[100%] items-center md:rounded-[2vw] rounded-[5vw] relative z-20 flex md:justify-between justify-center md:flex-row flex-col-reverse md:h-auto h-[80vw]">
                       <div className="flex flex-col ">
                         <h1 className="font-medium text-[#fff] md:text-[1.8vw] text-[5.2vw] md:text-left text-center md:whitespace-normal whitespace-nowrap text-ellipsis md:m-0 m-auto w-[90%] overflow-hidden">
                           {language.top["1"]}
@@ -157,8 +157,8 @@ function Home() {
                         </div>
                       </div>
                       <img
-                        className="md:w-[12vw] w-[42vw] md:relative absolute md:top-0 top-[-30vw]"
-                        src={require("../assets/img/banner.png")}
+                        className="md:w-[12vw] w-[42vw] md:h-[14vw] md:relative absolute md:top-0 top-[-30vw] object-contain md:opacity-100 opacity-0 hidden"
+                        src={require("../assets/img/goge.png")}
                         alt=""
                       />
                     </div>
@@ -321,14 +321,14 @@ function Home() {
                 <div className="md:absolute md:text-[#fff] text-[#000] md:font-medium font-bold md:text-[1.6vw] text-[3.6vw] rounded-[1vw] md:bg-[#E94A4A] p-[2vw] px-[3vw] z-40 md:w-[80%] flex justify-center left-[10%] bottom-[3vw]">
                   <div className="flex gap-[1vw] items-center md:w-[35%] w-[45%]">
                     <h1>{language["feedback"]["2"]}</h1>
-                    <button className="p-[.4vw] rounded-[5vw] border border-white md:block hidden">
+                    <button className="p-[.4vw] rounded-[5vw] border border-white  hidden">
                       <ViewWhite />
                     </button>
                   </div>
                   <button className="mx-[4vw] md:border-white border-black border"></button>
                   <div className="flex gap-[1vw] items-center  md:w-[35%] w-[45%]">
                     <h1>{language["feedback"]["3"]}</h1>
-                    <button className="p-[.4vw] rounded-[5vw] border border-white md:block hidden">
+                    <button className="p-[.4vw] rounded-[5vw] border border-white  hidden">
                       <ViewWhite />
                     </button>
                   </div>
@@ -342,35 +342,27 @@ function Home() {
                   <div className="grid gap-[3vw] md:grid-cols-2 gap-x-[6vw] md:w-auto w-full">
                     <div className="flex items-center gap-[2vw]">
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        {language["feedback"]["4"]}
+                        1) {language["feedback"]["4"]}
                       </h1>
-                      <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        80 kg
-                      </button>
+                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        {language["feedback"]["5"]}
+                        2) {language["feedback"]["5"]}
                       </h1>
-                      <button className="bg-[#E94A4A] w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        120 kg
-                      </button>
+                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        {language["feedback"]["6"]}
+                        3) {language["feedback"]["6"]}
                       </h1>
-                      <button className="bg-[#E94A4A] whitespace-nowrap w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        90 {language["day"]}
-                      </button>
+                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
                       <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        {language["feedback"]["7"]}
+                       4) {language["feedback"]["7"]}
                       </h1>
-                      <button className="bg-[#E94A4A] whitespace-nowrap w-[45%] p-[.4vw] rounded-[.6vw] text-[#fff] font-bold md:text-[2vw] text-[4vw]">
-                        40 {language["day"]}
-                      </button>
+                     
                     </div>
                   </div>
                   <img
