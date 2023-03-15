@@ -341,28 +341,28 @@ function Home() {
                 <div className="flex items-center gap-[4vw] justify-between ">
                   <div className="grid gap-[3vw] md:grid-cols-2 gap-x-[6vw] md:w-auto w-full">
                     <div className="flex items-center gap-[2vw]">
-                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        1) {language["feedback"]["4"]}
+                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw] flex items-center gap-[1vw]">
+                        <img className="md:w-[3vw] w-[6vw]" src={require("../assets/img/q.png")} alt="" />{" "}
+                        {language["feedback"]["4"]}
                       </h1>
-                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
-                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        2) {language["feedback"]["5"]}
+                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw] flex items-center gap-[1vw]">
+                        <img className="md:w-[3vw] w-[6vw]" src={require("../assets/img/w.png")} alt="" />
+                        {language["feedback"]["5"]}
                       </h1>
-                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
-                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                        3) {language["feedback"]["6"]}
+                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw] flex items-center gap-[1vw]">
+                        <img className="md:w-[3vw] w-[6vw]" src={require("../assets/img/e.png")} alt="" />
+                        {language["feedback"]["6"]}
                       </h1>
-                      
                     </div>
                     <div className="flex items-center gap-[2vw]">
-                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw]">
-                       4) {language["feedback"]["7"]}
+                      <h1 className="font-bold md:text-[1.6vw] text-[3.6vw] flex items-center gap-[1vw]">
+                        <img className="md:w-[3vw] w-[6vw]" src={require("../assets/img/r.png")} alt="" />
+                        {language["feedback"]["7"]}
                       </h1>
-                     
                     </div>
                   </div>
                   <img
