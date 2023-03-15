@@ -231,7 +231,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="p-[3vw] md:relative md:top-[-10vw] absolute bottom-[-10vw] pt-[10vw] pb-[18vw] border-t-transparent">
+            <div className="p-[3vw] md:relative md:top-[-10vw] absolute bottom-[-10vw] pt-[10vw] pb-[18vw] border-t-transparent "  id="company">
               <div className="bg-[#FFE7C3] p-[3vw] md:rounded-[1vw] rounded-[3vw] px-[6vw] md:mt-0 mt-[4vw]">
                 <div className="flex justify-between items-center md:flex-row flex-col">
                   <div className="md:w-[60%]">
@@ -282,7 +282,7 @@ function Home() {
                 {language["feedback"]["1"]}
               </h1>
               <div className="flex gap-[3vw] relative md:w-auto w-full ">
-                {tabNames?.map((item, i) => (
+                {/* {tabNames?.map((item, i) => (
                   <button
                     className="uppercase md:py-[.4vw] md:pb-[1.5vw] py-[1.8vw] md:rounded-t-[1vw] rounded-t-[3vw] px-[3vw] pb-[1.4vw] relative bottom-[-1vw] tabbg font-semibold md:w-auto w-full"
                     onClick={() => setTab(i)}
@@ -292,7 +292,7 @@ function Home() {
                   >
                     {item?.name}
                   </button>
-                ))}
+                ))} */}
               </div>
             </div>
             <div className="w-full relative z-[30] shadow-[0px_0px_10px_rgba(0,0,0,0.7)] bg-[#F8F3EC] p-[2vw] rounded-[1vw] rounded-tl-[0vw]">

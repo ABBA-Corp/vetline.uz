@@ -39,7 +39,7 @@ function Footer() {
                 {language["6"]}
               </h1>
               <a
-                href="#tops"
+                href="#company"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["6"]}
@@ -63,10 +63,10 @@ function Footer() {
                 {language["4"]}
               </Link>
               <a
-                href="/#faq"
+                href="#contact"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw] "
               >
-                F.A.Q
+               {language["5"]}
               </a>
               <a
                 href="/#after"
