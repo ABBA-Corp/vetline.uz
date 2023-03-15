@@ -51,7 +51,7 @@ function Footer() {
                 {language["2"]}
               </Link>
               <a
-                href="#tops"
+                href="/#tops"
                 className="md:text-[#9F9B97] hover:text-[#000] text-[#ffffff9d] md:text-[1.2vw] text-[3.2vw]"
               >
                 {language["tops"]}

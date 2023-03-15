@@ -24,22 +24,21 @@ function App() {
   return (
     <div>
       <Toaster />
-      {(loader && <Loader />) || (
-        <Provider store={store}>
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path={"/"} element={<Home />} />
-              <Route path={"/products"} element={<Products />} />
-              <Route path={"/products/:id"} element={<Products />} />
-              <Route path={"/product/:id"} element={<Product />} />
-              <Route path={"/about"} element={<About />} />
-              <Route path={"/terms"} element={<Terms />} />
-            </Routes>
-            <Footer />
-          </BrowserRouter>
-        </Provider>
-      )}
+      {loader && <Loader />}
+      <Provider store={store}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/products"} element={<Products />} />
+            <Route path={"/products/:id"} element={<Products />} />
+            <Route path={"/product/:id"} element={<Product />} />
+            <Route path={"/about"} element={<About />} />
+            <Route path={"/terms"} element={<Terms />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </Provider>
     </div>
   );
 }
