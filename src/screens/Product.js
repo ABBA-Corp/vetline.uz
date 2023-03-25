@@ -157,13 +157,13 @@ function Product() {
             {language?.results_treatment}
           </h1>
           <p className="md:text-[1.2vw] text-[2.3vw] text-[#fff] ">
-            {product?.[`description_${currentLang}`]}
+            {product?.[`treatment_outcome_${currentLang}`]}
           </p>
         </div>
         <div className="py-[4vw] custom-slick">
-          <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold mb-[2vw]">
+          {/* <h1 className="md:text-[2vw] text-[5vw] text-[#fff] font-bold mb-[2vw]">
             {language?.results_treatment}
-          </h1>
+          </h1> */}
           {/* <div className="grid grid-cols-2 gap-[3vw]"> */}
           <Slider {...settings}>
             {results?.map((item, i) => (
